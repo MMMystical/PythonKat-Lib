@@ -34,7 +34,7 @@ local Library = {
 		Kat = {
 			Main = Color3.fromHSV(262/360, 60/255, 34/255),
 			Secondary = Color3.fromHSV(240/360, 40/255, 63/255),
-			Tertiary = Color3.fromHSV(260/360, 60/255, 148/255),
+			Tertiary = Color3.fromHSV(250/360, 175/255, 200/255),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
