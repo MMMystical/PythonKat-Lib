@@ -435,7 +435,7 @@ function Library:create(options)
 		Name = "PythonKat",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
-		Link = "https://github.com/deeeity/pythonkat-lib"
+		Link = "https://github.com/mmmystical/pythonkat-lib"
 	}, options)
 
 	if getgenv and getgenv().MercuryUI then
@@ -921,7 +921,7 @@ function Library:create(options)
 
 	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007"}
 	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228"}
-	creditsTab:credit{Name = "Repository", Description = "UI Library Repository", Github="https://github.com/deeeity/pythonkat-lib/blob/master/src.lua"}
+	creditsTab:credit{Name = "Repository", Description = "UI Library Repository", Github="https://github.com/mmmystical/pythonkat-lib/blob/master/src.lua"}
 
 	return mt
 end
