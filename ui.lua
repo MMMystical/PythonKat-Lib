@@ -806,7 +806,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -20}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = tostring(os.date("%X")):sub(1, os.date("%X"):len()-3)
+		Text = "Chat Bypasser script"
 	})
 
 	do
@@ -817,7 +817,7 @@ function Library:create(options)
 			if counter >= desiredInterval then
 				counter -= desiredInterval
 				local date = tostring(os.date("%X"))
-				timeDisplay.Text = date:sub(1, date:len()-3)
+				timeDisplay.Text = "Chat Bypasser script"
 			end
 		end)
 	end
@@ -922,6 +922,7 @@ function Library:create(options)
 	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007"}
 	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228"}
 	creditsTab:credit{Name = "Repository", Description = "UI Library Repository", Github="https://github.com/MMMystical/PythonKat-Lib/edit/main/ui.lua"}
+	creditsTab:credit{Name = "PythonKat", Description = "Modified", Discord = "mmmystical"}
 
 	return mt
 end
