@@ -883,7 +883,7 @@ function Library:create(options)
 	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007", V3rmillion = "AbstractPoo"}
 	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228", V3rmillion = "0xDEITY"}
 	creditsTab:credit{Name = "Repository", Description = "UI Library Repository", Github = "https://github.com/MMMystical/PythonKat-Lib/edit/main/ui.lua"}
-	creditsTab:credit{Name = "PythonKat", Description = "Modified", Github = "https://github.com/MMMystical", Discord = "mmmystical"}
+	creditsTab:credit{Name = "PythonKat", Description = "Modified", Discord = "mmmystical", Github = "https://github.com/MMMystical"}
 
 	return mt
 end
