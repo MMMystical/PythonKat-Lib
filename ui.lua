@@ -43,7 +43,7 @@ local Library = {
 		},
 		Christmas = {
 			Main = Color3.fromRGB(70, 70, 81),
-			Secondary = Color3.fromRGB(91, 102, 106),
+			Secondary = Color3.fromRGB(90, 97, 121),
 			Tertiary = Color3.fromRGB(94, 175, 241),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
@@ -410,7 +410,7 @@ function Library:create(options)
 	end
 
 	options = self:set_defaults({
-		Name = "PythonKat v0.11 ❄",
+		Name = "PythonKat ❄",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
 		Link = "https://github.com/MMMystical/pythonkat-lib"
@@ -886,7 +886,7 @@ function Library:create(options)
 		Callback = function()
 			settingsTab:prompt{
 				Title = "PythonKat v0.11 ❄",
-				Text = "test",
+				Text = "-added 2 new themes ❄😼\n-a few more changes ✅",
 				Buttons = {
 					Nice = function()
 					end,
@@ -905,9 +905,9 @@ function Library:create(options)
 
 	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007", V3rmillion = "AbstractPoo"}
 	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228", V3rmillion = "0xDEITY"}
-	creditsTab:credit{Name = "Repository", Description = "UI Library Repository", Github = "https://github.com/MMMystical/PythonKat-Lib/edit/main/ui.lua"}
-	creditsTab:credit{Name = "PythonKat - Discord", Description = "Worked on by", Discord = "mmmystical"}
-	creditsTab:credit{Name = "PythonKat - Github", Description = "Worked on by", Github = "https://github.com/MMMystical"}
+	creditsTab:credit{Name = "Repository", Description = "PythonKat Library Repository", Github = "https://github.com/MMMystical/PythonKat-Lib/edit/main/ui.lua"}
+	creditsTab:credit{Name = "PythonKat - Discord", Description = "Worked on by 😼", Discord = "mmmystical"}
+	creditsTab:credit{Name = "PythonKat - Github", Description = "Worked on by 😼", Github = "https://github.com/MMMystical"}
 
 	return mt
 end
