@@ -33,6 +33,14 @@ local Library = {
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
 		},
+		Minty = {
+			Main = Color3.fromRGB(54, 54, 63),
+			Secondary = Color3.fromRGB(71, 72, 84),
+			Tertiary = Color3.fromRGB(65, 195, 95),
+
+			StrongText = Color3.fromHSV(0, 0, 1),		
+			WeakText = Color3.fromHSV(0, 0, 172/255)
+		},
 		Christmas = {
 			Main = Color3.fromRGB(70, 70, 81),
 			Secondary = Color3.fromRGB(91, 102, 106),
@@ -402,7 +410,7 @@ function Library:create(options)
 	end
 
 	options = self:set_defaults({
-		Name = "PythonKat ❄",
+		Name = "PythonKat v0.11 ❄",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
 		Link = "https://github.com/MMMystical/pythonkat-lib"
@@ -776,7 +784,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat ❄"
+		Text = "Script | PythonKat v0.11 ❄"
 	})
 
 	function Library:set_scriptdisplay(txt)
@@ -871,6 +879,21 @@ function Library:create(options)
 			Library.DragSpeed = (20 - value)/100
 		end,
 	}
+	
+	settingsTab:button{
+		Name = "Changelog",
+		Description = "What's new to PythonKat?",
+		Callback = function()
+			settingsTab:prompt{
+				Title = "PythonKat v0.11 ❄",
+				Text = "test",
+				Buttons = {
+					Nice = function()
+					end,
+				}
+			}
+		end,
+	}
 
 	local creditsTab = Library.tab(mt, {
 		Name = "Credits",
@@ -883,7 +906,8 @@ function Library:create(options)
 	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007", V3rmillion = "AbstractPoo"}
 	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228", V3rmillion = "0xDEITY"}
 	creditsTab:credit{Name = "Repository", Description = "UI Library Repository", Github = "https://github.com/MMMystical/PythonKat-Lib/edit/main/ui.lua"}
-	creditsTab:credit{Name = "PythonKat", Description = "Modified", Discord = "mmmystical", Github = "https://github.com/MMMystical"}
+	creditsTab:credit{Name = "PythonKat - Discord", Description = "Worked on by", Discord = "mmmystical"}
+	creditsTab:credit{Name = "PythonKat - Github", Description = "Worked on by", Github = "https://github.com/MMMystical"}
 
 	return mt
 end
