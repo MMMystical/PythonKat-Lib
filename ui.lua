@@ -886,7 +886,7 @@ function Library:create(options)
 		Callback = function()
 			settingsTab:prompt{
 				Title = "PythonKat v0.11 ❄",
-				Text = "-added 2 new themes ❄😼\n-a few more changes ✅",
+				Text = "-added 2 new themes ❄😼\n-a few more changes ✅\n-some changes on credits 🔨",
 				Buttons = {
 					Nice = function()
 					end,
