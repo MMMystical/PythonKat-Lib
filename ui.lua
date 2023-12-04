@@ -26,7 +26,7 @@ local Library = {
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
 		},
-		❄ Kat = {
+		"❄ Kat" = {
 			Main = Color3.fromRGB(70, 70, 81),
 			Secondary = Color3.fromRGB(120, 133, 139),
 			Tertiary = Color3.fromRGB(94, 175, 241),
