@@ -1,5 +1,12 @@
 --[[
 
+    ____        __  __                __ __      __ 
+   / __ \__  __/ /_/ /_  ____  ____  / //_/___ _/ /_
+  / /_/ / / / / __/ __ \/ __ \/ __ \/ ,< / __ `/ __/
+ / ____/ /_/ / /_/ / / /u/w/u/ / / / /| / /_/ / /_  
+/_/    \__, /\__/_/ /_/\____/_/ /_/_/ |_\__,_/\__/  
+      /____/                                        
+
 edited: 12/4
 developers:
 v3rm: AbstractPoo	discord: Abstract#8007
@@ -28,9 +35,9 @@ local Library = {
 		},
 		Christmas = {
 			Main = Color3.fromRGB(70, 70, 81),
-			Secondary = Color3.fromRGB(120, 133, 139),
+			Secondary = Color3.fromRGB(91, 102, 106),
 			Tertiary = Color3.fromRGB(94, 175, 241),
-	
+
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
 		},
@@ -766,7 +773,7 @@ function Library:create(options)
 		Position = UDim2.new(0, 105, 1, -10),
 		Size = UDim2.new(0, 400,0, 20),
 		AnchorPoint = Vector2.new(0, 1),
-		Theme = {TextColor3 = {"WeakText", -20}},
+		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Text = "Script | PythonKat ❄"
@@ -876,7 +883,7 @@ function Library:create(options)
 	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007", V3rmillion = "AbstractPoo"}
 	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228", V3rmillion = "0xDEITY"}
 	creditsTab:credit{Name = "Repository", Description = "UI Library Repository", Github = "https://github.com/MMMystical/PythonKat-Lib/edit/main/ui.lua"}
-	creditsTab:credit{Name = "PythonKat", Description = "Modified", Discord = "mmmystical", Github = "https://github.com/MMMystical"}
+	creditsTab:credit{Name = "PythonKat", Description = "Modified", Github = "https://github.com/MMMystical", Discord = "mmmystical"}
 
 	return mt
 end
@@ -2723,11 +2730,11 @@ function Library:credit(options)
 			TextXAlignment = Enum.TextXAlignment.Left
 		})
 	end
-	
-	
+
+
 
 	if setclipboard then
-	
+
 		if options.Github then
 			local githubContainer = creditContainer:object("TextButton", {
 				AnchorPoint = Vector2.new(1, 1),
@@ -2746,7 +2753,7 @@ function Library:credit(options)
 				setclipboard(options.Github)
 			end)
 		end
-	
+
 		if options.Discord then
 			local discordContainer = creditContainer:object("TextButton", {
 				AnchorPoint = Vector2.new(1, 1),
