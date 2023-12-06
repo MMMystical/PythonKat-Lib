@@ -907,10 +907,10 @@ function Library:create(options)
 	creditsTab:credit{Name = "Abstract", Description = "UI Library Developer", Discord = "Abstract#8007", V3rmillion = "AbstractPoo"}
 	creditsTab:credit{Name = "Deity", Description = "UI Library Developer", Discord = "Deity#0228", V3rmillion = "0xDEITY"}
 	creditsTab:credit{Name = "Repository", Description = "PythonKat Library Repository", Github = "https://github.com/MMMystical/PythonKat-Lib/edit/main/ui.lua"}
-	creditsTab:credit{Name = "PythonKat - Discord", Description = "Main Developer", Discord = "mmmystical"}
-	creditsTab:credit{Name = "PythonKat - Github", Description = "Main Developer", Github = "https://github.com/MMMystical"}
-	creditsTab:credit{Name = "Kevin - Discord", Description = "Co Developer", Discord = "kevinjky7555"}
-	creditsTab:credit{Name = "PythonKat - Github", Description = "Co Developer", Github = "https://github.com/Kevinjky7555"}
+	creditsTab:credit{Name = "PythonKat - Discord", Description = "Main Developer 😼", Discord = "mmmystical"}
+	creditsTab:credit{Name = "PythonKat - Github", Description = "Main Developer 😼", Github = "https://github.com/MMMystical"}
+	creditsTab:credit{Name = "Kevin - Discord", Description = "Co Developer 😎", Discord = "kevinjky7555"}
+	creditsTab:credit{Name = "Kevin - Github", Description = "Co Developer 😎", Github = "https://github.com/Kevinjky7555"}
 
 	return mt
 end
