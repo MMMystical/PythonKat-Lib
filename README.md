@@ -14,7 +14,7 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ### Changelog
-- v0.11
+- v0.11 ❄
   - Added 2 new themes ❄😼
   - Some changes on credits 🔨
   - A few more changes ✅
@@ -32,4 +32,4 @@
 
 👤 Also credits to the original creators of Mercury Lib as this is a modified version of it: **Deity#0228** and **Abstract#8007**
 
-More updates to come soon.
+# More updates to come soon.
