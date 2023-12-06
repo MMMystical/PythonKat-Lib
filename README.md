@@ -16,7 +16,7 @@
 ### Changelog
 - v0.12 ❄
   - Changes on credits tab 🔨
-  - - Small fixes ✅
+  - Small fixes ✅
 - v0.11 ❄
   - Added 2 new themes ❄😼
   - Some changes on credits 🔨
