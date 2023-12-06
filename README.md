@@ -14,6 +14,9 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ### Changelog
+- v0.12 ❄
+  - Changes on credits tab 🔨
+  - - Small fixes ✅
 - v0.11 ❄
   - Added 2 new themes ❄😼
   - Some changes on credits 🔨
@@ -21,7 +24,7 @@
 - v0.109
   - Slight changes to the ui 📃
 - v0.10
-  - Release of PythonKat Library 🔨
+  - Release of the PythonKat Library 🔨
 
 ### Authors
 
@@ -29,6 +32,11 @@
 
 * Github: [@MMMystical](https://github.com/MMMystical)
 * Discord: mmmystical
+
+👤 **Kevin** (co developer)
+
+* Github: [@Kevinjky7555](https://github.com/Kevinjky7555)
+* Discord: kevinjky7555
 
 👤 Also credits to the original creators of Mercury Lib as this is a modified version of it: **Deity#0228** and **Abstract#8007**
 
