@@ -10,8 +10,8 @@
 ```
 
 ### What is the PythonKat Library?
-- The PythonKat Library is a ui for scripts used by PythonKat.
-- It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source library for roblox scripts.
+- The PythonKat Library is a ui library for scripts used by PythonKat.
+- It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ### Changelog
 - v0.11
