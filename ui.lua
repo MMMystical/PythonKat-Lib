@@ -7,7 +7,7 @@
 /_/    \__, /\__/_/ /_/\____/_/ /_/_/ |_\__,_/\__/  
       /____/                                        
 
-edited: 12/6
+edited: 12/31
 developers:
 v3rm: AbstractPoo	 discord: Abstract#8007
 v3rm: 0xDEITY		 discord: Deity#0228
@@ -46,6 +46,14 @@ local Library = {
 			Main = Color3.fromRGB(70, 70, 81),
 			Secondary = Color3.fromRGB(90, 97, 121),
 			Tertiary = Color3.fromRGB(94, 175, 241),
+
+			StrongText = Color3.fromHSV(0, 0, 1),		
+			WeakText = Color3.fromHSV(0, 0, 172/255)
+		},
+		Lunar = {
+			Main = Color3.fromRGB(58, 58, 67),
+			Secondary = Color3.fromRGB(64, 69, 86),
+			Tertiary = Color3.fromRGB(255, 65, 65),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
@@ -785,7 +793,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.12 ❄"
+		Text = "Script | PythonKat v0.13 🎆"
 	})
 
 	function Library:set_scriptdisplay(txt)
@@ -880,14 +888,14 @@ function Library:create(options)
 			Library.DragSpeed = (20 - value)/100
 		end,
 	}
-	
+
 	settingsTab:button{
 		Name = "Changelog",
 		Description = "What's new to PythonKat?",
 		Callback = function()
 			settingsTab:prompt{
-				Title = "PythonKat v0.12 ❄",
-				Text = "-changes on credits tab 🔨\n-small fixes ✅",
+				Title = "PythonKat v0.13 🎆",
+				Text = "-new year theme 🌉\n-few fixes ✅",
 				Buttons = {
 					Nice = function()
 					end,
