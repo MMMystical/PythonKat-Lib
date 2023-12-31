@@ -14,6 +14,9 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ### Changelog
+- v0.13 🎆
+  - New year theme 🌉
+  - Few fixes ✅
 - v0.12 ❄
   - Changes on credits tab 🔨
   - Small fixes ✅
