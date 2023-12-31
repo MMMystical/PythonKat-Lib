@@ -51,8 +51,8 @@ local Library = {
 			WeakText = Color3.fromHSV(0, 0, 172/255)
 		},
 		Lunar = {
-			Main = Color3.fromRGB(58, 58, 67),
-			Secondary = Color3.fromRGB(64, 69, 86),
+			Main = Color3.fromRGB(63, 58, 67),
+			Secondary = Color3.fromRGB(54, 58, 72),
 			Tertiary = Color3.fromRGB(255, 65, 65),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
@@ -419,7 +419,7 @@ function Library:create(options)
 	end
 
 	options = self:set_defaults({
-		Name = "PythonKat ❄",
+		Name = "PythonKat 🎆",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
 		Link = "https://github.com/MMMystical/pythonkat-lib"
