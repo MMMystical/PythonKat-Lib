@@ -419,7 +419,7 @@ end
 function Library:create(options)
 
 	local settings = {
-		Theme = "Dark"
+		Theme = "Kat"
 	}
 
 	if readfile and writefile and isfile then
@@ -809,8 +809,8 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.15 🍀"
-	})
+		Text = "Script"
+	}, " | PythonKat v0.15 🍀")
 
 	function Library:set_scriptdisplay(txt)
 		scriptDisplay.Text = txt
