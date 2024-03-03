@@ -7,7 +7,7 @@
 /_/    \__, /\__/_/ /_/\____/_/ /_/_/ |_\__,_/\__/  
       /____/                                        
 
-edited: 02/29
+edited: 03/03
 developers:
 v3rm: AbstractPoo	 discord: Abstract#8007
 v3rm: 0xDEITY		 discord: Deity#0228
@@ -30,6 +30,22 @@ local Library = {
 			Main = Color3.fromHSV(262/360, 60/255, 34/255),
 			Secondary = Color3.fromHSV(240/360, 40/255, 63/255),
 			Tertiary = Color3.fromHSV(250/360, 175/255, 200/255),
+
+			StrongText = Color3.fromHSV(0, 0, 1),		
+			WeakText = Color3.fromHSV(0, 0, 172/255)
+		},
+		Light = {
+			Main = Color3.fromRGB(209, 209, 209),
+			Secondary = Color3.fromRGB(76, 76, 76),
+			Tertiary = Color3.fromRGB(50, 50, 50),
+
+			StrongText = Color3.fromHSV(0, 0, 0),		
+			WeakText = Color3.fromHSV(0, 0, 0.172549)
+		},
+		Dark = {
+			Main = Color3.fromRGB(54, 54, 54),
+			Secondary = Color3.fromRGB(104, 104, 104),
+			Tertiary = Color3.fromRGB(47, 47, 47),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
@@ -793,7 +809,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.14 🍀"
+		Text = "Script | PythonKat v0.15 🍀"
 	})
 
 	function Library:set_scriptdisplay(txt)
@@ -894,8 +910,8 @@ function Library:create(options)
 		Description = "What's new to PythonKat?",
 		Callback = function()
 			settingsTab:prompt{
-				Title = "PythonKat v0.14 🍀",
-				Text = "-changed default theme 💚\n-small fix ✅",
+				Title = "PythonKat v0.15 🍀",
+				Text = "-added 2 new themes (light & dark) 💚\n-a bit better ui 🔨\n-a few more changes ✅",
 				Buttons = {
 					Nice = function()
 					end,
