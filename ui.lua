@@ -810,10 +810,11 @@ function Library:create(options)
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Text = "Script"
-	}, " | PythonKat v0.15 🍀")
+	})
 
 	function Library:set_scriptdisplay(txt)
-		scriptDisplay.Text = txt
+		libVersion = " | PythonKat v0.15 🍀"
+		scriptDisplay.Text = txt .. libVersion
 	end
 
 	local settingsTabIcon = profile:object("ImageButton", {
