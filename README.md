@@ -15,7 +15,7 @@
 
 ### Changelog
 - v0.15 🍀
-  - Added 2 new themes (light & dark) 💚
+  - Added a new theme (light) 💚
   - A bit better ui 🔨
   - A few more changes ✅
 - v0.14 🍀
