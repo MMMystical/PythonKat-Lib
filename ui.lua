@@ -809,12 +809,11 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script"
+		Text = "Script | PythonKat v0.15 🍀"
 	})
 
 	function Library:set_scriptdisplay(txt)
-		libVersion = " | PythonKat v0.15 🍀"
-		scriptDisplay.Text = txt .. libVersion
+		scriptDisplay.Text = txt
 	end
 
 	local settingsTabIcon = profile:object("ImageButton", {
