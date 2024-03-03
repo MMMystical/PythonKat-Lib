@@ -14,6 +14,10 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ### Changelog
+- v0.15 🍀
+  - Added 2 new themes (light & dark) 💚
+  - A bit better ui 🔨
+  - A few more changes ✅
 - v0.14 🍀
   - Changed default theme 💚
   - Small fix ✅
