@@ -35,20 +35,12 @@ local Library = {
 			WeakText = Color3.fromHSV(0, 0, 172/255)
 		},
 		Light = {
-			Main = Color3.fromRGB(209, 209, 209),
-			Secondary = Color3.fromRGB(76, 76, 76),
-			Tertiary = Color3.fromRGB(50, 50, 50),
-
-			StrongText = Color3.fromHSV(0, 0, 0),		
-			WeakText = Color3.fromHSV(0, 0, 0.172549)
-		},
-		Dark = {
-			Main = Color3.fromRGB(54, 54, 54),
-			Secondary = Color3.fromRGB(104, 104, 104),
-			Tertiary = Color3.fromRGB(47, 47, 47),
+			Main = Color3.fromRGB(226, 226, 226),
+			Secondary = Color3.fromRGB(211, 211, 211),
+			Tertiary = Color3.fromRGB(191, 191, 191),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 172/255)
+			WeakText = Color3.fromHSV(0, 0, 0.278431)
 		},
 		Minty = {
 			Main = Color3.fromRGB(54, 54, 63),
@@ -911,7 +903,7 @@ function Library:create(options)
 		Callback = function()
 			settingsTab:prompt{
 				Title = "PythonKat v0.15 🍀",
-				Text = "-added 2 new themes (light & dark) 💚\n-a bit better ui 🔨\n-a few more changes ✅",
+				Text = "-added a new theme (light) 💚\n-a bit better ui 🔨\n-a few more changes ✅",
 				Buttons = {
 					Nice = function()
 					end,
