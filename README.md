@@ -16,6 +16,7 @@
 ### Changelog
 - v0.16 🐇
   - Added a new seasonal theme (easter) 🩷
+  - Removed old christmas theme ❄
   - A few fixes ✅
 - v0.15 🍀
   - Added a new theme (light) 💚
