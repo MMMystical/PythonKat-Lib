@@ -903,7 +903,7 @@ function Library:create(options)
 		Callback = function()
 			settingsTab:prompt{
 				Title = "PythonKat v0.16 🐇",
-				Text = "-added a new seasonal theme (easter) 🩷\n-a few fixes ✅",
+				Text = "-added a new seasonal theme (easter) 🩷\n-removed old christmas theme ❄\n-a few fixes ✅",
 				Buttons = {
 					Nice = function()
 					end,
