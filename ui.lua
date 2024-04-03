@@ -51,7 +51,7 @@ local Library = {
 			WeakText = Color3.fromHSV(0, 0, 172/255)
 		},
 		Easter = {
-			Main = Color3.fromRGB(70, 70, 81),
+			Main = Color3.fromRGB(166, 111, 166),
 			Secondary = Color3.fromRGB(74, 61, 99),
 			Tertiary = Color3.fromRGB(255, 170, 255),
 
