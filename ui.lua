@@ -7,7 +7,7 @@
 /_/    \__, /\__/_/ /_/\____/_/ /_/_/ |_\__,_/\__/  
       /____/                                        
 
-edited: 04/03
+edited: 07/04
 developers:
 v3rm: AbstractPoo	 discord: Abstract#8007
 v3rm: 0xDEITY		 discord: Deity#0228
@@ -58,10 +58,10 @@ local Library = {
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
 		},
-		Lunar = {
-			Main = Color3.fromRGB(63, 58, 67),
-			Secondary = Color3.fromRGB(54, 58, 72),
-			Tertiary = Color3.fromRGB(255, 65, 65),
+		Summer = {
+			Main = Color3.fromRGB(255, 217, 2),
+			Secondary = Color3.fromRGB(255, 170, 0),
+			Tertiary = Color3.fromRGB(244, 255, 147),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
@@ -427,7 +427,7 @@ function Library:create(options)
 	end
 
 	options = self:set_defaults({
-		Name = "PythonKat 🧺",
+		Name = "PythonKat 🌊",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
 		Link = "https://github.com/MMMystical/pythonkat-lib"
@@ -801,7 +801,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.16 🐇"
+		Text = "Script | PythonKat v0.20 🌊"
 	})
 
 	function Library:set_scriptdisplay(txt)
@@ -902,8 +902,8 @@ function Library:create(options)
 		Description = "What's new to PythonKat?",
 		Callback = function()
 			settingsTab:prompt{
-				Title = "PythonKat v0.16 🐇",
-				Text = "-added a new seasonal theme (easter) 🩷\n-removed old christmas theme ❄\n-a few fixes ✅",
+				Title = "PythonKat v0.20 🌊",
+				Text = "-added a new seasonal theme (summer) ☀️⛱️\n-removed old lunar theme 🎆\n-a few fixes ✅",
 				Buttons = {
 					Nice = function()
 					end,
