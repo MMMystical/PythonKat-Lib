@@ -14,6 +14,10 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ### Changelog
+- v0.20 🌊
+  - Added a new seasonal theme (summer) ☀️⛱️
+  - Removed old lunar theme 🎆
+  - A few fixes ✅
 - v0.16 🐇
   - Added a new seasonal theme (easter) 🩷
   - Removed old christmas theme ❄
