@@ -611,7 +611,7 @@ function Library:create(options)
 	local searchIcon = urlBar:object("ImageLabel", {
 		AnchorPoint = Vector2.new(0, .5),
 		Position = UDim2.new(0, 5,0.5, 0);
-		Theme = {ImageColor3 = "Tertiary"},
+		Theme = {ImageColor3 = "Icon"},
 		Size = UDim2.fromOffset(16, 16),
 		Image = "http://www.roblox.com/asset/?id=8497489946",
 		BackgroundTransparency = 1
@@ -1004,7 +1004,7 @@ function Library:notification(options)
 		Position = UDim2.fromOffset(1, 1),
 		Size = UDim2.fromOffset(18, 18),
 		Image = "rbxassetid://8628681683",
-		Theme = {ImageColor3 = "Tertiary"}
+		Theme = {ImageColor3 = "Icon"}
 	})
 
 	local exit = noti:object("ImageButton", {
@@ -1225,7 +1225,7 @@ function Library:tab(options)
 		Position = UDim2.new(0, 5, 0.5, 0),
 		Size = UDim2.new(0, 15, 0, 15),
 		Image = options.Icon,
-		Theme = {ImageColor3 = "StrongText"}
+		Theme = {ImageColor3 = "Icon"}
 	})
 
 	local tabButtonClose = tabButton:object("ImageButton", {
@@ -1323,7 +1323,7 @@ function Library:toggle(options)
 		Position = UDim2.new(1, -11,0.5, 0),
 		Size = UDim2.new(0, 26,0, 26),
 		Image = on,
-		Theme = {ImageColor3 = "Tertiary"},
+		Theme = {ImageColor3 = "Icon"},
 		ImageTransparency = (toggled and 0) or 1
 	})
 
@@ -1467,7 +1467,7 @@ function Library:dropdown(options)
 		Position = UDim2.new(1, -11, 0, 12),
 		Size = UDim2.fromOffset(26, 26),
 		Image = "rbxassetid://8498840035",
-		Theme = {ImageColor3 = "Tertiary"}
+		Theme = {ImageColor3 = "Icon"}
 	})
 
 	local selectedText = dropdownContainer:object("TextLabel", {
@@ -1827,7 +1827,7 @@ function Library:button(options)
 		Position = UDim2.new(1, -11, 0.5, 0),
 		Size = UDim2.fromOffset(26, 26),
 		Image = "rbxassetid://8498776661",
-		Theme = {ImageColor3 = "Tertiary"}
+		Theme = {ImageColor3 = "Icon"}
 	})
 
 	do
@@ -1917,7 +1917,7 @@ function Library:color_picker(options)
 		Position = UDim2.new(1, -11, 0.5, 0),
 		Size = UDim2.fromOffset(26, 26),
 		Image = "rbxassetid://8604555937",
-		ImageColor3 = Library.CurrentTheme.Tertiary
+		ImageColor3 = Library.CurrentTheme.Icon
 	})
 
 	do
@@ -3463,7 +3463,7 @@ function Library:textbox(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -13, 0.5, 0),
 		Size = UDim2.new(0, 16, 0, 16),
-		Theme = {ImageColor3 = "StrongText"}
+		Theme = {ImageColor3 = "Icon"}
 	})
 
 
