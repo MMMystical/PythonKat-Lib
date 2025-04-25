@@ -7,7 +7,7 @@
 /_/    \__, /\__/_/ /_/\____/_/ /_/_/ |_\__,_/\__/  
       /____/                                        
 
-edited: 07/04
+edited: 04/25
 developers:
 v3rm: AbstractPoo	 discord: Abstract#8007
 v3rm: 0xDEITY		 discord: Deity#0228
@@ -58,13 +58,13 @@ local Library = {
 			StrongText = Color3.fromHSV(0, 0, 1),		
 			WeakText = Color3.fromHSV(0, 0, 172/255)
 		},
-		Summer = {
-			Main = Color3.fromRGB(255, 217, 2),
-			Secondary = Color3.fromRGB(255, 170, 0),
-			Tertiary = Color3.fromRGB(244, 255, 147),
+		Vampiric = {
+			Main = Color3.fromRGB(3, 2, 2),
+			Secondary = Color3.fromRGB(54, 36, 36),
+			Tertiary = Color3.fromRGB(82, 29, 29),
 
-			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 172/255)
+			StrongText = Color3.fromRGB(143, 46, 62),
+			WeakText = Color3.fromHSV(0, 0, 0.196078)
 		},
 		Vaporwave = {},
 		OperaGX = {},
