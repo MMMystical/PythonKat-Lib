@@ -65,6 +65,7 @@ local Library = {
 
 			StrongText = Color3.fromRGB(143, 46, 62),
 			WeakText = Color3.fromRGB(68, 22, 30),
+			PromptText = Color3.fromRGB(3, 2, 2),
 		},
 		Vaporwave = {},
 		OperaGX = {},
@@ -3206,7 +3207,7 @@ function Library:prompt(options)
 	for text, callback in next, options.Buttons do
 		local button = buttonHolder:object("TextButton", {
 			AnchorPoint = Vector2.new(1, 1),
-			Theme = {BackgroundColor3 = "Tertiary"},
+			Theme = {BackgroundColor3 = "Tertiary", TextColor3 = "PromptText"},
 			Text = tostring(text):upper(),
 			TextSize = 13,
 			Font = Enum.Font.SourceSansBold,
