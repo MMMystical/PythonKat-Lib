@@ -386,15 +386,21 @@ function Library:show(state)
 end
 
 function Library:darken(color, f)
-	local h, s, v = Color3.toHSV(color)
-	f = 1 - ((f or 15) / 80)
-	return Color3.fromHSV(h, math.clamp(s/f, 0, 1), math.clamp(v*f, 0, 1))
+	f = (f or 15) / 100
+	return Color3.new(
+		math.clamp(color.R * (1 - f), 0, 1),
+		math.clamp(color.G * (1 - f), 0, 1),
+		math.clamp(color.B * (1 - f), 0, 1)
+	)
 end
 
 function Library:lighten(color, f)
-	local h, s, v = Color3.toHSV(color)
-	f = 1 - ((f or 15) / 80)
-	return Color3.fromHSV(h, math.clamp(s*f, 0, 1), math.clamp(v/f, 0, 1))
+	f = (f or 15) / 100 -- convert to a 0–1 scale
+	return Color3.new(
+		math.clamp(color.R + (1 - color.R) * f, 0, 1),
+		math.clamp(color.G + (1 - color.G) * f, 0, 1),
+		math.clamp(color.B + (1 - color.B) * f, 0, 1)
+	)
 end
 
 --[[ old lighten/darken functions, may revert if contrast gets fucked up
@@ -582,7 +588,7 @@ function Library:create(options)
 	end)
 
 	closeButton.MouseLeave:connect(function()
-		closeButton:tween{ImageColor3 = Library.CurrentTheme.StrongText}
+		closeButton:tween{ImageColor3 = Library.CurrentTheme.Icon}
 	end)
 
 	local function closeUI()
@@ -777,22 +783,18 @@ function Library:create(options)
 		Size = UDim2.fromOffset(80, 80)
 	}):round(100)
 
-	local displayName; do
-		local h, s, v = Color3.toHSV(options.Theme.Tertiary)
-		local c = self:lighten(options.Theme.Tertiary, 20)
+	local c = self:lighten(options.Theme.Tertiary, 20)
 
-		local displayName = profile:object("TextLabel", {
-			RichText = true,
-			Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
-			TextScaled = true,
-			Position = UDim2.new(0, 105,0, 10),
-			Theme = {TextColor3 = {"Tertiary", 10}},
-			Size = UDim2.new(0, 400,0, 40),
-			BackgroundTransparency = 1,
-			TextXAlignment = Enum.TextXAlignment.Left
-		})
-		Library.DisplayName = displayName
-	end
+	local displayName = profile:object("TextLabel", {
+		RichText = true,
+		Text = "Welcome, <font color='rgb(" .. math.floor(c.R * 255) .. "," .. math.floor(c.G * 255) .. "," .. math.floor(c.B * 255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
+		TextScaled = true,
+		Position = UDim2.new(0, 105, 0, 10),
+		Theme = {TextColor3 = {"Tertiary", 10}},
+		Size = UDim2.new(0, 400, 0, 40),
+		BackgroundTransparency = 1,
+		TextXAlignment = Enum.TextXAlignment.Left
+	})
 
 	local profileName = profile:object("TextLabel", {
 		Text = "@" .. LocalPlayer.Name,
@@ -2458,8 +2460,8 @@ function Library:color_picker(options)
 						Name = "1",
 						Text = tostring(selectedColor.R * 255),
 						Theme = {BackgroundColor3 = {"Secondary", 12}},
-						Size = UDim2.new(1, -10,0, 18),
-						TextColor3 = Color3.fromHSV(0, 0.8, 1),
+						Size = UDim2.new(1, -10, 0, 18),
+						TextColor3 = Color3.new(selectedColor.R, 0, 0),
 						TextSize = 14,
 						BackgroundTransparency = 1,
 						TextTransparency = 1
@@ -2470,8 +2472,8 @@ function Library:color_picker(options)
 						Name = "2",
 						Text = tostring(selectedColor.G * 255),
 						Theme = {BackgroundColor3 = {"Secondary", 12}},
-						Size = UDim2.new(1, -10,0, 18),
-						TextColor3 = Color3.fromHSV(120/360, 0.8, 1),
+						Size = UDim2.new(1, -10, 0, 18),
+						TextColor3 = Color3.new(0, selectedColor.G, 0),
 						TextSize = 14,
 						BackgroundTransparency = 1,
 						TextTransparency = 1
@@ -2482,8 +2484,8 @@ function Library:color_picker(options)
 						Text = tostring(selectedColor.B * 255),
 						Name = "3",
 						Theme = {BackgroundColor3 = {"Secondary", 12}},
-						Size = UDim2.new(1, -10,0, 18),
-						TextColor3 = Color3.fromHSV(240/360, 0.8, 1),
+						Size = UDim2.new(1, -10, 0, 18),
+						TextColor3 = Color3.new(0, 0, selectedColor.B),
 						TextSize = 14,
 						BackgroundTransparency = 1,
 						TextTransparency = 1
@@ -2990,7 +2992,7 @@ function Library:_theme_selector()
 
 			local colorStrong = colorSecondary:object("Frame", {
 				Size = UDim2.new(1, -30, 0, 9),
-				BackgroundColor3 = themeColors.StrongText
+				BackgroundColor3 = themeColors.Icon
 			}):round(100)
 
 			local colorTertiary = colorSecondary:object("Frame", {
