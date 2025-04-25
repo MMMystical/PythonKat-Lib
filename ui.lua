@@ -30,8 +30,9 @@ local Library = {
 			Main = Color3.fromRGB(29, 26, 34),
 			Secondary = Color3.fromRGB(53, 53, 63),
 			Tertiary = Color3.fromRGB(86, 63, 200),
+			Icon = Color3.fromRGB(172, 172, 172),
 
-			StrongText = Color3.fromRGB(255, 255, 255),		
+			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
 			PromptText = Color3.fromRGB(3, 2, 2)
 		},
@@ -39,8 +40,9 @@ local Library = {
 			Main = Color3.fromRGB(226, 226, 226),
 			Secondary = Color3.fromRGB(211, 211, 211),
 			Tertiary = Color3.fromRGB(191, 191, 191),
+			Icon = Color3.fromRGB(71, 71, 71),
 
-			StrongText = Color3.fromRGB(0, 0, 0),		
+			StrongText = Color3.fromRGB(0, 0, 0),
 			WeakText = Color3.fromRGB(71, 71, 71),
 			PromptText = Color3.fromRGB(3, 2, 2)
 		},
@@ -48,8 +50,9 @@ local Library = {
 			Main = Color3.fromRGB(54, 54, 63),
 			Secondary = Color3.fromRGB(71, 72, 84),
 			Tertiary = Color3.fromRGB(65, 195, 95),
+			Icon = Color3.fromRGB(53, 159, 76),
 
-			StrongText = Color3.fromRGB(255, 255, 255),		
+			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
 			PromptText = Color3.fromRGB(3, 2, 2)
 		},
@@ -57,8 +60,9 @@ local Library = {
 			Main = Color3.fromRGB(166, 111, 166),
 			Secondary = Color3.fromRGB(74, 61, 99),
 			Tertiary = Color3.fromRGB(255, 170, 255),
+			Icon = Color3.fromRGB(202, 135, 202),
 
-			StrongText = Color3.fromRGB(255, 255, 255),		
+			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
 			PromptText = Color3.fromRGB(3, 2, 2)
 		},
@@ -66,6 +70,7 @@ local Library = {
 			Main = Color3.fromRGB(3, 2, 2),
 			Secondary = Color3.fromRGB(0, 0, 0),
 			Tertiary = Color3.fromRGB(82, 29, 29),
+			Icon = Color3.fromRGB(68, 22, 30),
 
 			StrongText = Color3.fromRGB(143, 46, 62),
 			WeakText = Color3.fromRGB(68, 22, 30),
@@ -84,6 +89,7 @@ local Library = {
 		Main = {},
 		Secondary = {},
 		Tertiary = {},
+		Icon = {},
 
 		StrongText = {},
 		WeakText = {},
@@ -815,7 +821,7 @@ function Library:create(options)
 
 	local settingsTabIcon = profile:object("ImageButton", {
 		BackgroundTransparency = 1,
-		Theme = {ImageColor3 = "WeakText"},
+		Theme = {ImageColor3 = "Icon"},
 		Size = UDim2.fromOffset(24, 24),
 		Position = UDim2.new(1, -10, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
@@ -824,7 +830,7 @@ function Library:create(options)
 
 	local creditsTabIcon = profile:object("ImageButton", {
 		BackgroundTransparency = 1,
-		Theme = {ImageColor3 = "WeakText"},
+		Theme = {ImageColor3 = "Icon"},
 		Size = UDim2.fromOffset(24, 24),
 		Position = UDim2.new(1, -44, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
@@ -1327,7 +1333,7 @@ function Library:toggle(options)
 		Position = UDim2.new(1, -11,0.5, 0),
 		Size = UDim2.new(0, 26,0, 26),
 		Image = off,
-		Theme = {ImageColor3 = "WeakText"},
+		Theme = {ImageColor3 = "Icon"},
 		ImageTransparency = (toggled and 1) or 0
 	})
 
