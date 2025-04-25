@@ -292,7 +292,7 @@ function Library:object(class, properties)
 
 		local tooltipArrow = tooltipContainer:object("ImageLabel", {
 			Image = "http://www.roblox.com/asset/?id=4292970642",
-			Theme = {ImageColor3 = {"Main", 10}},
+			Theme = {ImageColor3 = {"Icon", 10}},
 			AnchorPoint = Vector2.new(0.5, 0),
 			Rotation = 180,
 			Position = UDim2.fromScale(0.5, 1),
@@ -572,7 +572,7 @@ function Library:create(options)
 		BackgroundTransparency = 1,
 		Size = UDim2.fromOffset(14, 14),
 		Position = UDim2.new(1, -11, 0, 11),
-		Theme = {ImageColor3 = "StrongText"},
+		Theme = {ImageColor3 = "Icon"},
 		Image = "http://www.roblox.com/asset/?id=8497487650",
 		AnchorPoint = Vector2.new(1)
 	})
@@ -611,7 +611,7 @@ function Library:create(options)
 	local searchIcon = urlBar:object("ImageLabel", {
 		AnchorPoint = Vector2.new(0, .5),
 		Position = UDim2.new(0, 5,0.5, 0);
-		Theme = {ImageColor3 = "Main"},
+		Theme = {ImageColor3 = "Icon"},
 		Size = UDim2.fromOffset(16, 16),
 		Image = "http://www.roblox.com/asset/?id=8497489946",
 		BackgroundTransparency = 1
@@ -696,7 +696,7 @@ function Library:create(options)
 		Position = UDim2.new(0, 5, 0.5, 0),
 		Size = UDim2.new(0, 15, 0, 15),
 		Image = "http://www.roblox.com/asset/?id=8569322835",
-		Theme = {ImageColor3 = "StrongText"}
+		Theme = {ImageColor3 = "Icon"}
 	})
 
 	local homePage = content:object("Frame", {
@@ -1109,7 +1109,7 @@ function Library:tab(options)
 
 		quickAccessIcon = quickAccessButton:object("ImageLabel", {
 			BackgroundTransparency = 1,
-			Theme = {ImageColor3 = "StrongText"},
+			Theme = {ImageColor3 = "Icon"},
 			Image = options.Icon,
 			Size = UDim2.fromScale(0.5, 0.5),
 			Centered = true
@@ -1234,7 +1234,7 @@ function Library:tab(options)
 		Position = UDim2.new(1, -5, 0.5, 0),
 		Size = UDim2.fromOffset(14, 14),
 		Image = "rbxassetid://8497487650",
-		Theme = {ImageColor3 = "StrongText"}
+		Theme = {ImageColor3 = "Icon"}
 	})
 
 	tabButtonClose.MouseButton1Click:connect(function()
