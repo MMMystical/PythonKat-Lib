@@ -60,11 +60,11 @@ local Library = {
 		},
 		Vampiric = {
 			Main = Color3.fromRGB(3, 2, 2),
-			Secondary = Color3.fromRGB(54, 36, 36),
+			Secondary = Color3.fromRGB(0, 0, 0),
 			Tertiary = Color3.fromRGB(82, 29, 29),
 
 			StrongText = Color3.fromRGB(143, 46, 62),
-			WeakText = Color3.fromHSV(0, 0, 0.196078)
+			WeakText = Color3.fromRGB(68, 22, 30),
 		},
 		Vaporwave = {},
 		OperaGX = {},
