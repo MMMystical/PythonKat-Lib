@@ -30,7 +30,7 @@ local Library = {
 			Main = Color3.fromRGB(29, 26, 34),
 			Secondary = Color3.fromRGB(53, 53, 63),
 			Tertiary = Color3.fromRGB(86, 63, 200),
-			Icon = Color3.fromHSV(0, 0, 0.67451),
+			Icon = Color3.fromRGB(172, 172, 172),
 
 			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
@@ -40,7 +40,7 @@ local Library = {
 			Main = Color3.fromRGB(226, 226, 226),
 			Secondary = Color3.fromRGB(211, 211, 211),
 			Tertiary = Color3.fromRGB(191, 191, 191),
-			Icon = Color3.fromHSV(0, 0, 0),
+			Icon = Color3.fromRGB(71, 71, 71),
 
 			StrongText = Color3.fromRGB(0, 0, 0),
 			WeakText = Color3.fromRGB(71, 71, 71),
@@ -50,7 +50,7 @@ local Library = {
 			Main = Color3.fromRGB(54, 54, 63),
 			Secondary = Color3.fromRGB(71, 72, 84),
 			Tertiary = Color3.fromRGB(65, 195, 95),
-			Icon = Color3.fromHSV(0.3695, 0.666667, 0.623529),
+			Icon = Color3.fromRGB(53, 159, 76),
 
 			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
@@ -60,7 +60,7 @@ local Library = {
 			Main = Color3.fromRGB(166, 111, 166),
 			Secondary = Color3.fromRGB(74, 61, 99),
 			Tertiary = Color3.fromRGB(255, 170, 255),
-			Icon = Color3.fromHSV(0.833333, 0.331685, 0.792157),
+			Icon = Color3.fromRGB(202, 135, 202),
 
 			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
@@ -70,7 +70,7 @@ local Library = {
 			Main = Color3.fromRGB(3, 2, 2),
 			Secondary = Color3.fromRGB(0, 0, 0),
 			Tertiary = Color3.fromRGB(82, 29, 29),
-			Icon = Color3.fromHSV(0.9725, 0.678325, 0.560784),
+			Icon = Color3.fromRGB(68, 22, 30),
 
 			StrongText = Color3.fromRGB(143, 46, 62),
 			WeakText = Color3.fromRGB(68, 22, 30),
@@ -582,7 +582,7 @@ function Library:create(options)
 	end)
 
 	closeButton.MouseLeave:connect(function()
-		closeButton:tween{ImageColor3 = Library.CurrentTheme.Icon}
+		closeButton:tween{ImageColor3 = Library.CurrentTheme.StrongText}
 	end)
 
 	local function closeUI()
@@ -1207,7 +1207,7 @@ function Library:tab(options)
 	end
 
 	local tabButtonText = tabButton:object("TextLabel", {
-		Theme = {TextColor3 = "Icon"},
+		Theme = {TextColor3 = "StrongText"},
 		AnchorPoint = Vector2.new(0, .5),
 		BackgroundTransparency = 1,
 		TextSize = 14,
@@ -2990,7 +2990,7 @@ function Library:_theme_selector()
 
 			local colorStrong = colorSecondary:object("Frame", {
 				Size = UDim2.new(1, -30, 0, 9),
-				BackgroundColor3 = themeColors.Icon
+				BackgroundColor3 = themeColors.StrongText
 			}):round(100)
 
 			local colorTertiary = colorSecondary:object("Frame", {
