@@ -30,7 +30,7 @@ local Library = {
 			Main = Color3.fromRGB(29, 26, 34),
 			Secondary = Color3.fromRGB(53, 53, 63),
 			Tertiary = Color3.fromRGB(86, 63, 200),
-			Icon = Color3.fromRGB(172, 172, 172),
+			Icon = Color3.fromRGB(67, 49, 157),
 
 			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
@@ -914,7 +914,7 @@ function Library:create(options)
 		Callback = function()
 			settingsTab:prompt{
 				Title = "PythonKat v0.21 🩸",
-				Text = "-added seasonal theme (easter) 🐇 and vampiric theme 🩸\n-removed summer theme ⛱️\n-major fixes ✅",
+				Text = "-added easter theme 🐇 + vampiric theme 🩸\n-removed summer theme ⛱️\n-major fixes ✅",
 				Buttons = {
 					Nice = function()
 					end,
