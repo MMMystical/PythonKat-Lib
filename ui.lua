@@ -40,7 +40,7 @@ local Library = {
 			Main = Color3.fromRGB(226, 226, 226),
 			Secondary = Color3.fromRGB(211, 211, 211),
 			Tertiary = Color3.fromRGB(191, 191, 191),
-			Icon = Color3.fromRGB(71, 71, 71),
+			StrongText = Color3.fromRGB(0, 0, 0),
 
 			StrongText = Color3.fromRGB(0, 0, 0),
 			WeakText = Color3.fromRGB(71, 71, 71),
@@ -70,7 +70,7 @@ local Library = {
 			Main = Color3.fromRGB(3, 2, 2),
 			Secondary = Color3.fromRGB(0, 0, 0),
 			Tertiary = Color3.fromRGB(82, 29, 29),
-			Icon = Color3.fromRGB(68, 22, 30),
+			Icon = Color3.fromRGB(143, 46, 62),
 
 			StrongText = Color3.fromRGB(143, 46, 62),
 			WeakText = Color3.fromRGB(68, 22, 30),
@@ -1207,7 +1207,7 @@ function Library:tab(options)
 	end
 
 	local tabButtonText = tabButton:object("TextLabel", {
-		Theme = {TextColor3 = "StrongText"},
+		Theme = {TextColor3 = "Icon"},
 		AnchorPoint = Vector2.new(0, .5),
 		BackgroundTransparency = 1,
 		TextSize = 14,
