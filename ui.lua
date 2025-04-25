@@ -30,7 +30,7 @@ local Library = {
 			Main = Color3.fromRGB(29, 26, 34),
 			Secondary = Color3.fromRGB(53, 53, 63),
 			Tertiary = Color3.fromRGB(86, 63, 200),
-			Icon = Color3.fromRGB(172, 172, 172),
+			Icon = Color3.fromHSV(0, 0, 0.67451),
 
 			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
@@ -40,7 +40,7 @@ local Library = {
 			Main = Color3.fromRGB(226, 226, 226),
 			Secondary = Color3.fromRGB(211, 211, 211),
 			Tertiary = Color3.fromRGB(191, 191, 191),
-			StrongText = Color3.fromRGB(0, 0, 0),
+			Icon = Color3.fromHSV(0, 0, 0),
 
 			StrongText = Color3.fromRGB(0, 0, 0),
 			WeakText = Color3.fromRGB(71, 71, 71),
@@ -50,7 +50,7 @@ local Library = {
 			Main = Color3.fromRGB(54, 54, 63),
 			Secondary = Color3.fromRGB(71, 72, 84),
 			Tertiary = Color3.fromRGB(65, 195, 95),
-			Icon = Color3.fromRGB(53, 159, 76),
+			Icon = Color3.fromHSV(0.3695, 0.666667, 0.623529),
 
 			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
@@ -60,7 +60,7 @@ local Library = {
 			Main = Color3.fromRGB(166, 111, 166),
 			Secondary = Color3.fromRGB(74, 61, 99),
 			Tertiary = Color3.fromRGB(255, 170, 255),
-			Icon = Color3.fromRGB(202, 135, 202),
+			Icon = Color3.fromHSV(0.833333, 0.331685, 0.792157),
 
 			StrongText = Color3.fromRGB(255, 255, 255),
 			WeakText = Color3.fromRGB(172, 172, 172),
@@ -70,7 +70,7 @@ local Library = {
 			Main = Color3.fromRGB(3, 2, 2),
 			Secondary = Color3.fromRGB(0, 0, 0),
 			Tertiary = Color3.fromRGB(82, 29, 29),
-			Icon = Color3.fromRGB(143, 46, 62),
+			Icon = Color3.fromHSV(0.9725, 0.678325, 0.560784),
 
 			StrongText = Color3.fromRGB(143, 46, 62),
 			WeakText = Color3.fromRGB(68, 22, 30),
@@ -386,21 +386,15 @@ function Library:show(state)
 end
 
 function Library:darken(color, f)
-	f = (f or 15) / 100
-	return Color3.new(
-		math.clamp(color.R * (1 - f), 0, 1),
-		math.clamp(color.G * (1 - f), 0, 1),
-		math.clamp(color.B * (1 - f), 0, 1)
-	)
+	local h, s, v = Color3.toHSV(color)
+	f = 1 - ((f or 15) / 80)
+	return Color3.fromHSV(h, math.clamp(s/f, 0, 1), math.clamp(v*f, 0, 1))
 end
 
 function Library:lighten(color, f)
-	f = (f or 15) / 100 -- convert to a 0–1 scale
-	return Color3.new(
-		math.clamp(color.R + (1 - color.R) * f, 0, 1),
-		math.clamp(color.G + (1 - color.G) * f, 0, 1),
-		math.clamp(color.B + (1 - color.B) * f, 0, 1)
-	)
+	local h, s, v = Color3.toHSV(color)
+	f = 1 - ((f or 15) / 80)
+	return Color3.fromHSV(h, math.clamp(s*f, 0, 1), math.clamp(v/f, 0, 1))
 end
 
 --[[ old lighten/darken functions, may revert if contrast gets fucked up
@@ -783,18 +777,22 @@ function Library:create(options)
 		Size = UDim2.fromOffset(80, 80)
 	}):round(100)
 
-	local c = self:lighten(options.Theme.Tertiary, 20)
+	local displayName; do
+		local h, s, v = Color3.toHSV(options.Theme.Tertiary)
+		local c = self:lighten(options.Theme.Tertiary, 20)
 
-	local displayName = profile:object("TextLabel", {
-		RichText = true,
-		Text = "Welcome, <font color='rgb(" .. math.floor(c.R * 255) .. "," .. math.floor(c.G * 255) .. "," .. math.floor(c.B * 255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
-		TextScaled = true,
-		Position = UDim2.new(0, 105, 0, 10),
-		Theme = {TextColor3 = {"Tertiary", 10}},
-		Size = UDim2.new(0, 400, 0, 40),
-		BackgroundTransparency = 1,
-		TextXAlignment = Enum.TextXAlignment.Left
-	})
+		local displayName = profile:object("TextLabel", {
+			RichText = true,
+			Text = "Welcome, <font color='rgb(" ..  math.floor(c.R*255) .. "," .. math.floor(c.G*255) .. "," .. math.floor(c.B*255) .. ")'> <b>" .. LocalPlayer.DisplayName .. "</b> </font>",
+			TextScaled = true,
+			Position = UDim2.new(0, 105,0, 10),
+			Theme = {TextColor3 = {"Tertiary", 10}},
+			Size = UDim2.new(0, 400,0, 40),
+			BackgroundTransparency = 1,
+			TextXAlignment = Enum.TextXAlignment.Left
+		})
+		Library.DisplayName = displayName
+	end
 
 	local profileName = profile:object("TextLabel", {
 		Text = "@" .. LocalPlayer.Name,
@@ -2460,8 +2458,8 @@ function Library:color_picker(options)
 						Name = "1",
 						Text = tostring(selectedColor.R * 255),
 						Theme = {BackgroundColor3 = {"Secondary", 12}},
-						Size = UDim2.new(1, -10, 0, 18),
-						TextColor3 = Color3.new(selectedColor.R, 0, 0),
+						Size = UDim2.new(1, -10,0, 18),
+						TextColor3 = Color3.fromHSV(0, 0.8, 1),
 						TextSize = 14,
 						BackgroundTransparency = 1,
 						TextTransparency = 1
@@ -2472,8 +2470,8 @@ function Library:color_picker(options)
 						Name = "2",
 						Text = tostring(selectedColor.G * 255),
 						Theme = {BackgroundColor3 = {"Secondary", 12}},
-						Size = UDim2.new(1, -10, 0, 18),
-						TextColor3 = Color3.new(0, selectedColor.G, 0),
+						Size = UDim2.new(1, -10,0, 18),
+						TextColor3 = Color3.fromHSV(120/360, 0.8, 1),
 						TextSize = 14,
 						BackgroundTransparency = 1,
 						TextTransparency = 1
@@ -2484,8 +2482,8 @@ function Library:color_picker(options)
 						Text = tostring(selectedColor.B * 255),
 						Name = "3",
 						Theme = {BackgroundColor3 = {"Secondary", 12}},
-						Size = UDim2.new(1, -10, 0, 18),
-						TextColor3 = Color3.new(0, 0, selectedColor.B),
+						Size = UDim2.new(1, -10,0, 18),
+						TextColor3 = Color3.fromHSV(240/360, 0.8, 1),
 						TextSize = 14,
 						BackgroundTransparency = 1,
 						TextTransparency = 1
