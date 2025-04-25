@@ -611,7 +611,7 @@ function Library:create(options)
 	local searchIcon = urlBar:object("ImageLabel", {
 		AnchorPoint = Vector2.new(0, .5),
 		Position = UDim2.new(0, 5,0.5, 0);
-		Theme = {ImageColor3 = "Icon"},
+		Theme = {ImageColor3 = "Main"},
 		Size = UDim2.fromOffset(16, 16),
 		Image = "http://www.roblox.com/asset/?id=8497489946",
 		BackgroundTransparency = 1
