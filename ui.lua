@@ -7,7 +7,7 @@
 /_/    \__, /\__/_/ /_/\____/_/ /_/_/ |_\__,_/\__/  
       /____/                                        
 
-edited: 04/25
+edited: 04/26
 developers:
 v3rm: AbstractPoo	 discord: Abstract#8007
 v3rm: 0xDEITY		 discord: Deity#0228
@@ -914,7 +914,7 @@ function Library:create(options)
 		Callback = function()
 			settingsTab:prompt{
 				Title = "PythonKat v0.21 🩸",
-				Text = "-easter theme 🐇 + vampiric theme 🩸\n-bye summer theme ⛱️\n-major fixes ✅",
+				Text = "-easter theme 🐇 + vampiric theme 🩸\n-bye summer theme ⛱️",
 				Buttons = {
 					Nice = function()
 					end,
