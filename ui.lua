@@ -32,7 +32,8 @@ local Library = {
 			Tertiary = Color3.fromHSV(250/360, 175/255, 200/255),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 172/255)
+			WeakText = Color3.fromHSV(0, 0, 172/255),
+			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Light = {
 			Main = Color3.fromRGB(226, 226, 226),
@@ -40,7 +41,8 @@ local Library = {
 			Tertiary = Color3.fromRGB(191, 191, 191),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 0.278431)
+			WeakText = Color3.fromHSV(0, 0, 0.278431),
+			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Minty = {
 			Main = Color3.fromRGB(54, 54, 63),
@@ -48,7 +50,8 @@ local Library = {
 			Tertiary = Color3.fromRGB(65, 195, 95),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 172/255)
+			WeakText = Color3.fromHSV(0, 0, 172/255),
+			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Easter = {
 			Main = Color3.fromRGB(166, 111, 166),
@@ -56,7 +59,8 @@ local Library = {
 			Tertiary = Color3.fromRGB(255, 170, 255),
 
 			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 172/255)
+			WeakText = Color3.fromHSV(0, 0, 172/255),
+			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Vampiric = {
 			Main = Color3.fromRGB(3, 2, 2),
@@ -65,7 +69,7 @@ local Library = {
 
 			StrongText = Color3.fromRGB(143, 46, 62),
 			WeakText = Color3.fromRGB(68, 22, 30),
-			PromptText = Color3.fromRGB(3, 2, 2),
+			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Vaporwave = {},
 		OperaGX = {},
@@ -82,7 +86,8 @@ local Library = {
 		Tertiary = {},
 
 		StrongText = {},
-		WeakText = {}
+		WeakText = {},
+		PromptText = {}
 	},
 	WelcomeText = nil,
 	DisplayName = nil,
@@ -3207,7 +3212,7 @@ function Library:prompt(options)
 	for text, callback in next, options.Buttons do
 		local button = buttonHolder:object("TextButton", {
 			AnchorPoint = Vector2.new(1, 1),
-			Theme = {TextColor3 = "PromptText", BackgroundColor3 = "Tertiary"},
+			Theme = {BackgroundColor3 = "Tertiary", TextColor3 = "PromptText"},
 			Text = tostring(text):upper(),
 			TextSize = 13,
 			Font = Enum.Font.SourceSansBold,
