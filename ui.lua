@@ -3207,7 +3207,7 @@ function Library:prompt(options)
 	for text, callback in next, options.Buttons do
 		local button = buttonHolder:object("TextButton", {
 			AnchorPoint = Vector2.new(1, 1),
-			Theme = {BackgroundColor3 = "Tertiary", TextColor3 = "PromptText"},
+			Theme = {TextColor3 = "PromptText", BackgroundColor3 = "Tertiary"},
 			Text = tostring(text):upper(),
 			TextSize = 13,
 			Font = Enum.Font.SourceSansBold,
