@@ -594,9 +594,9 @@ function Library:create(options)
 		end)
 	end
 
-	--if getgenv then
-		--getgenv().PythonKatUI = closeUI
-	--end
+	if getgenv then
+		getgenv().PythonKatUI = closeUI
+	end
 
 	closeButton.MouseButton1Click:connect(function()
 		closeUI()
