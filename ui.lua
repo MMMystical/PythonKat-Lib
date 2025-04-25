@@ -426,14 +426,14 @@ function Library:create(options)
 	}
 
 	if readfile and writefile and isfile then
-		if not isfile("MercurySettings.json") then
-			writefile("MercurySettings.json", HTTPService:JSONEncode(settings))
+		if not isfile("PythonKatSettings.json") then
+			writefile("PythonKatSettings.json", HTTPService:JSONEncode(settings))
 		end
-		settings = HTTPService:JSONDecode(readfile("MercurySettings.json"))
+		settings = HTTPService:JSONDecode(readfile("PythonKatSettings.json"))
 		Library.CurrentTheme = Library.Themes[settings.Theme]
 		updateSettings = function(property, value)
 			settings[property] = value
-			writefile("MercurySettings.json", HTTPService:JSONEncode(settings))
+			writefile("PythonKatSettings.json", HTTPService:JSONEncode(settings))
 		end
 	end
 
@@ -444,9 +444,9 @@ function Library:create(options)
 		Link = "https://github.com/MMMystical/pythonkat-lib"
 	}, options)
 
-	if getgenv and getgenv().MercuryUI then
-		getgenv():MercuryUI()
-		getgenv().MercuryUI = nil
+	if getgenv and getgenv().PythonKatUI then
+		getgenv():PythonKatUI()
+		getgenv().PythonKatUI = nil
 	end
 
 
@@ -594,9 +594,9 @@ function Library:create(options)
 		end)
 	end
 
-	if getgenv then
-		getgenv().MercuryUI = closeUI
-	end
+	--if getgenv then
+		--getgenv().PythonKatUI = closeUI
+	--end
 
 	closeButton.MouseButton1Click:connect(function()
 		closeUI()
