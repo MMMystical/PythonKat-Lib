@@ -27,12 +27,12 @@ local HTTPService = game:GetService("HttpService")
 local Library = {
 	Themes = {
 		Kat = {
-			Main = Color3.fromHSV(262/360, 60/255, 34/255),
-			Secondary = Color3.fromHSV(240/360, 40/255, 63/255),
-			Tertiary = Color3.fromHSV(250/360, 175/255, 200/255),
+			Main = Color3.fromRGB(56, 34, 87),         -- HSV(262, 60, 34)
+			Secondary = Color3.fromRGB(38, 38, 63),     -- HSV(240, 40, 63)
+			Tertiary = Color3.fromRGB(197, 176, 255),   -- HSV(250, 175, 200)
 
-			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 172/255),
+			StrongText = Color3.fromRGB(255, 255, 255),		
+			WeakText = Color3.fromRGB(172, 172, 172),
 			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Light = {
@@ -40,8 +40,8 @@ local Library = {
 			Secondary = Color3.fromRGB(211, 211, 211),
 			Tertiary = Color3.fromRGB(191, 191, 191),
 
-			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 0.278431),
+			StrongText = Color3.fromRGB(0, 0, 0),		
+			WeakText = Color3.fromRGB(71, 71, 71),
 			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Minty = {
@@ -49,8 +49,8 @@ local Library = {
 			Secondary = Color3.fromRGB(71, 72, 84),
 			Tertiary = Color3.fromRGB(65, 195, 95),
 
-			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 172/255),
+			StrongText = Color3.fromRGB(255, 255, 255),		
+			WeakText = Color3.fromRGB(172, 172, 172),
 			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Easter = {
@@ -58,8 +58,8 @@ local Library = {
 			Secondary = Color3.fromRGB(74, 61, 99),
 			Tertiary = Color3.fromRGB(255, 170, 255),
 
-			StrongText = Color3.fromHSV(0, 0, 1),		
-			WeakText = Color3.fromHSV(0, 0, 172/255),
+			StrongText = Color3.fromRGB(255, 255, 255),		
+			WeakText = Color3.fromRGB(172, 172, 172),
 			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Vampiric = {
@@ -96,7 +96,6 @@ local Library = {
 	ToggleKey = Enum.KeyCode.Home,
 	UrlLabel = nil,
 	Url = nil
-
 }
 Library.__index = Library
 
@@ -433,7 +432,7 @@ function Library:create(options)
 	end
 
 	options = self:set_defaults({
-		Name = "PythonKat 🌊",
+		Name = "PythonKat 🦇",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
 		Link = "https://github.com/MMMystical/pythonkat-lib"
@@ -807,7 +806,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.20 🌊"
+		Text = "Script | PythonKat v0.21 🩸"
 	})
 
 	function Library:set_scriptdisplay(txt)
@@ -821,7 +820,7 @@ function Library:create(options)
 		Position = UDim2.new(1, -10, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
 		Image = "http://www.roblox.com/asset/?id=8559790237"
-	}):tooltip("settings")
+	}):tooltip("Settings")
 
 	local creditsTabIcon = profile:object("ImageButton", {
 		BackgroundTransparency = 1,
@@ -830,7 +829,7 @@ function Library:create(options)
 		Position = UDim2.new(1, -44, 1, -10),
 		AnchorPoint = Vector2.new(1, 1),
 		Image = "http://www.roblox.com/asset/?id=8577523456"
-	}):tooltip("credits")
+	}):tooltip("Credits")
 
 	local quickAccess = homePage:object("Frame", {
 		BackgroundTransparency = 1,
@@ -908,8 +907,8 @@ function Library:create(options)
 		Description = "What's new to PythonKat?",
 		Callback = function()
 			settingsTab:prompt{
-				Title = "PythonKat v0.20 🌊",
-				Text = "-added a new seasonal theme (summer) ☀️⛱️\n-removed old lunar theme 🎆\n-a few fixes ✅",
+				Title = "PythonKat v0.21 🩸",
+				Text = "-added back a seasonal theme (easter) 🐇🩷 and vampiric theme 🩸🧛\n-removed old summer theme ☀️⛱️\n-major fixes ✅",
 				Buttons = {
 					Nice = function()
 					end,
@@ -1026,8 +1025,7 @@ function Library:notification(options)
 		TextWrapped = true,
 		TextColor3 = Color3.fromRGB(255, 255, 255),
 		TextXAlignment = Enum.TextXAlignment.Left,
-		TextYAlignment = Enum.TextYAlignment.Top,
-		TextTransparency = 1
+		TextYAlignment = Enum.TextYAlignment.Top
 	})
 
 	text:tween({Size = UDim2.new(1, 0, 0, text.TextBounds.Y)})
