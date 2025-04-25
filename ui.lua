@@ -27,12 +27,12 @@ local HTTPService = game:GetService("HttpService")
 local Library = {
 	Themes = {
 		Kat = {
-			Main = Color3.fromRGB(56, 34, 87),         -- HSV(262, 60, 34)
-			Secondary = Color3.fromRGB(38, 38, 63),     -- HSV(240, 40, 63)
-			Tertiary = Color3.fromRGB(197, 176, 255),   -- HSV(250, 175, 200)
+			Main = Color3.fromHSV(262/360, 60/255, 34/255),
+			Secondary = Color3.fromHSV(240/360, 40/255, 63/255),
+			Tertiary = Color3.fromHSV(250/360, 175/255, 200/255),
 
-			StrongText = Color3.fromRGB(255, 255, 255),		
-			WeakText = Color3.fromRGB(172, 172, 172),
+			StrongText = Color3.fromHSV(0, 0, 1),		
+			WeakText = Color3.fromHSV(0, 0, 172/255),
 			PromptText = Color3.fromRGB(3, 2, 2)
 		},
 		Light = {
@@ -908,7 +908,7 @@ function Library:create(options)
 		Callback = function()
 			settingsTab:prompt{
 				Title = "PythonKat v0.21 🩸",
-				Text = "-added back a seasonal theme (easter) 🐇🩷 and vampiric theme 🩸🧛\n-removed old summer theme ☀️⛱️\n-major fixes ✅",
+				Text = "-added back seasonal theme (easter) 🐇🧺 and vampiric theme 🩸🧛\n-removed summer theme ☀️⛱️\n-major fixes ✅",
 				Buttons = {
 					Nice = function()
 					end,
