@@ -40,7 +40,7 @@ local Library = {
 			Main = Color3.fromRGB(226, 226, 226),
 			Secondary = Color3.fromRGB(211, 211, 211),
 			Tertiary = Color3.fromRGB(191, 191, 191),
-			Icon = Color3.fromRGB(71, 71, 71),
+			Icon = Color3.fromRGB(0, 0, 0),
 
 			StrongText = Color3.fromRGB(0, 0, 0),
 			WeakText = Color3.fromRGB(71, 71, 71),
@@ -70,7 +70,7 @@ local Library = {
 			Main = Color3.fromRGB(3, 2, 2),
 			Secondary = Color3.fromRGB(0, 0, 0),
 			Tertiary = Color3.fromRGB(82, 29, 29),
-			Icon = Color3.fromRGB(68, 22, 30),
+			Icon = Color3.fromRGB(143, 46, 62),
 
 			StrongText = Color3.fromRGB(143, 46, 62),
 			WeakText = Color3.fromRGB(68, 22, 30),
@@ -582,7 +582,7 @@ function Library:create(options)
 	end)
 
 	closeButton.MouseLeave:connect(function()
-		closeButton:tween{ImageColor3 = Library.CurrentTheme.StrongText}
+		closeButton:tween{ImageColor3 = Library.CurrentTheme.Icon}
 	end)
 
 	local function closeUI()
@@ -2950,7 +2950,7 @@ function Library:_theme_selector()
 			local themeColorsContainer = theme:object("Frame", {
 				Size = UDim2.new(1, 0, 1, -20),
 				BackgroundTransparency = 1
-			}):round(5):stroke("WeakText", 1)
+			}):round(5):stroke("Icon", 1)
 
 			local themeNameLabel = theme:object("TextLabel", {
 				BackgroundTransparency = 1,
@@ -2990,12 +2990,12 @@ function Library:_theme_selector()
 
 			local colorStrong = colorSecondary:object("Frame", {
 				Size = UDim2.new(1, -30, 0, 9),
-				BackgroundColor3 = themeColors.StrongText
+				BackgroundColor3 = themeColors.Icon
 			}):round(100)
 
 			local colorTertiary = colorSecondary:object("Frame", {
 				Size = UDim2.new(1, -40, 0, 9),
-				BackgroundColor3 = themeColors.WeakText
+				BackgroundColor3 = themeColors.Icon
 			}):round(100)
 
 			theme.MouseButton1Click:connect(function()
