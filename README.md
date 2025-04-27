@@ -14,6 +14,11 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ### Changelog
+- v0.215 🦇
+  - Updated notification logic 🔨
+  - Updated some info ℹ️
+  - Slight changes to UI and themes 🛠️
+  - Small fix + changed settings file name correctly ✅
 - v0.21 🦇
   - Added back seasonal theme (easter) 🩷
   - Added a new theme (vampiric) 🩸
