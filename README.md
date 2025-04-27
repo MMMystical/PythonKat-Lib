@@ -14,7 +14,7 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ### Changelog
-- v0.216 🦇 (04/28/2025)
+- v0.216 🦇 (04/27/2025)
   - Updated home page 🔧
   - Added new clock and greeting ℹ️
   - Updated status logic 🔨
