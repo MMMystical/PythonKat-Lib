@@ -955,7 +955,7 @@ function Library:notification(options)
 
 	local noti = self.notifs:object("Frame", {
 		BackgroundTransparency = 1,
-		Theme = {BackgroundColor3 = "Main"},
+		Theme = options.System == true and {BackgroundColor3 = {"Main", 10}} or {BackgroundColor3 = "Main"},
 		Size = UDim2.new(0, 300,0, 0)
 	}):round(10)
 
@@ -980,7 +980,7 @@ function Library:notification(options)
 		ZIndex = 0,
 		Image = "rbxassetid://6014261993",
 		ImageColor3 = Color3.fromRGB(0,0,0),
-		ImageTransparency = 0.9,
+		ImageTransparency = 1,
 		ScaleType = Enum.ScaleType.Slice,
 		SliceCenter = Rect.new(49, 49, 450, 450)
 	})
