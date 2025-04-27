@@ -9,10 +9,10 @@
 
 edited: 04/27
 developers:
-v3rm: AbstractPoo	 discord: Abstract#8007
-v3rm: 0xDEITY		 discord: Deity#0228
-github: MMMystical	 discord: mmmystical
-github: Kevinjky7555 	 discord: kevinjky7555
+v3rm: AbstractPoo	 	discord: Abstract#8007
+v3rm: 0xDEITY		 	discord: Deity#0228
+github: MMMystical	 	discord: mmmystical
+github: Kevinjky7555 	discord: kevinjky7555
 
 ]]
 
@@ -803,6 +803,48 @@ function Library:create(options)
 		BackgroundTransparency = 1,
 		TextXAlignment = Enum.TextXAlignment.Left
 	})
+	
+	task.spawn(function()
+		local function updateProfileText()
+			local now = os.date("*t")
+			local hour = now.hour
+			local minute = now.min
+
+			local timeStr = string.format("%02d:%02d", hour, minute)
+
+			local greeting = "Hello"
+			local emoji = "👋"
+
+			if hour >= 5 and hour <= 11 then
+				greeting = "Good morning"
+				emoji = "🌅"
+			elseif hour >= 12 and hour <= 17 then
+				greeting = "Good afternoon"
+				emoji = "🌞"
+			elseif hour >= 18 and hour <= 20 then
+				greeting = "Good evening"
+				emoji = "🌇"
+			else
+				greeting = "Goodnight"
+				emoji = "🌙"
+			end
+			
+			local name = LocalPlayer.Name
+
+			profileName.Text = "@" .. name .. " (" .. greeting .. " " .. emoji .. ", it's " .. timeStr .. ")"
+		end
+
+		updateProfileText()
+
+		while true do
+			local now = os.clock()
+			local waitTime = 60 - (now % 60)
+			task.wait(waitTime)
+
+			updateProfileText()
+		end
+	end)
+
 
 	local scriptDisplay = profile:object("TextLabel", {
 		BackgroundTransparency = 1,
