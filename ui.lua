@@ -828,7 +828,7 @@ function Library:create(options)
 				greeting = "Goodnight"
 				emoji = "🌙"
 			end
-			
+
 			local name = LocalPlayer.Name
 
 			profileName.Text = "@" .. name .. " (" .. greeting .. " " .. emoji .. ", it's " .. timeStr .. ")"
@@ -836,15 +836,17 @@ function Library:create(options)
 
 		updateProfileText()
 
-		while true do
-			local now = os.clock()
-			local waitTime = 60 - (now % 60)
+		while gui do
+			local now = os.time()
+			local seconds = os.date("*t", now).sec
+			local waitTime = 60 - seconds
 			task.wait(waitTime)
+
+			if not gui then break end
 
 			updateProfileText()
 		end
 	end)
-
 
 	local scriptDisplay = profile:object("TextLabel", {
 		BackgroundTransparency = 1,
@@ -854,7 +856,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.215 🩸"
+		Text = "Script | PythonKat v0.216 🩸"
 	})
 
 	function Library:set_scriptdisplay(txt)
@@ -955,7 +957,7 @@ function Library:create(options)
 		Description = "What's new to PythonKat?",
 		Callback = function()
 			settingsTab:prompt{
-				Title = "PythonKat v0.215 🩸",
+				Title = "PythonKat v0.216 🩸",
 				Text = "-easter theme 🐇 + vampiric theme 🩸\n-bye summer theme ⛱️",
 				Buttons = {
 					Nice = function()
