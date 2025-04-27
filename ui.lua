@@ -7,7 +7,7 @@
 /_/    \__, /\__/_/ /_/\____/_/ /_/_/ |_\__,_/\__/  
       /____/                                        
 
-edited: 04/26
+edited: 04/27
 developers:
 v3rm: AbstractPoo	 discord: Abstract#8007
 v3rm: 0xDEITY		 discord: Deity#0228
@@ -812,7 +812,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.21 🩸"
+		Text = "Script | PythonKat v0.215 🩸"
 	})
 
 	function Library:set_scriptdisplay(txt)
@@ -913,7 +913,7 @@ function Library:create(options)
 		Description = "What's new to PythonKat?",
 		Callback = function()
 			settingsTab:prompt{
-				Title = "PythonKat v0.21 🩸",
+				Title = "PythonKat v0.215 🩸",
 				Text = "-easter theme 🐇 + vampiric theme 🩸\n-bye summer theme ⛱️",
 				Buttons = {
 					Nice = function()
@@ -955,7 +955,7 @@ function Library:notification(options)
 
 	local noti = self.notifs:object("Frame", {
 		BackgroundTransparency = 1,
-		Theme = options.System == true and {BackgroundColor3 = {"Main", 10}} or {BackgroundColor3 = "Main"},
+		Theme = {BackgroundColor3 = "Main"},
 		Size = UDim2.new(0, 300,0, 0)
 	}):round(10)
 
