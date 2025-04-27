@@ -947,6 +947,7 @@ function Library:notification(options)
 		Title = "Notification",
 		Text = "Your character has been reset.",
 		Duration = 3,
+		System = false,
 		Callback = function() end
 	}, options)
 
@@ -979,7 +980,7 @@ function Library:notification(options)
 		ZIndex = 0,
 		Image = "rbxassetid://6014261993",
 		ImageColor3 = Color3.fromRGB(0,0,0),
-		ImageTransparency = 1,
+		ImageTransparency = 0.9,
 		ScaleType = Enum.ScaleType.Slice,
 		SliceCenter = Rect.new(49, 49, 450, 450)
 	})
@@ -1003,7 +1004,7 @@ function Library:notification(options)
 		ImageTransparency = 1,
 		Position = UDim2.fromOffset(1, 1),
 		Size = UDim2.fromOffset(18, 18),
-		Image = "rbxassetid://8628681683",
+		Image = options.System == true and "rbxassetid://8569322835" or "rbxassetid://8628681683",
 		Theme = {ImageColor3 = "Icon"}
 	})
 
