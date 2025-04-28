@@ -15,6 +15,7 @@
 
 ## Changelog
 ## v0.216 🦇 (LATEST, 04/27/2025)
+https://media.discordapp.net/attachments/748908026714652673/1366135453492969532/image.png?ex=680fd849&is=680e86c9&hm=a2dc28387cc3628eedac1fe699faa25d8b9a50f794263038fb21ea22e43de6b3&=&format=webp&quality=lossless
   - Updated home page 🔧
   - Added new clock and greeting ℹ️
   - Updated status logic 🔨
