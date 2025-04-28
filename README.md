@@ -15,7 +15,6 @@
 
 ## Changelog
 ## v0.216 🦇 (LATEST, 04/27/2025)
-![Image](https://github.com/user-attachments/assets/cd13c6a0-0dbf-496d-a0ba-b26a5af64470)
   - Updated home page 🔧
   - Added new clock and greeting ℹ️
   - Updated status logic 🔨
