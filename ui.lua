@@ -105,6 +105,8 @@ local Library = {
 }
 Library.__index = Library
 
+print("Running PythonKat 🦇 v0.22 🩸 build 1")
+
 local selectedTab
 
 Library._promptExists = false
