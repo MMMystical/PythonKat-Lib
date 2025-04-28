@@ -53,7 +53,7 @@
 ### v0.12 ❄ (12/06/2023) ![Christmas Badge](https://img.shields.io/badge/Event-CHRISTMAS-lightblue?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Minor Badge](https://img.shields.io/badge/Update-MINOR-green?style=plastic&logo=moonrepo&logoColor=white&labelColor=black)
   - Changes on credits tab 🔨
   - Small fixes ✅
-### v0.11 ❄ (12/04/2023) ![Christmas Badge](https://img.shields.io/badge/Event-CHRISTMAS-lightblue?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Major Badge](https://img.shields.io/badge/Update-MAJOR-purple?style=plastic&logo=moonrepo&logoColor=white&labelColor=black)
+### v0.11 ❄ (12/04/2023) ![Winter Badge](https://img.shields.io/badge/Event-WINTER-lightblue?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Major Badge](https://img.shields.io/badge/Update-MAJOR-purple?style=plastic&logo=moonrepo&logoColor=white&labelColor=black)
   - Added 2 new themes ❄😼
   - Some changes on credits 🔨
   - A few more changes ✅
