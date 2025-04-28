@@ -935,7 +935,6 @@ function Library:create(options)
 		Callback = function()
 			self.Toggled = not self.Toggled
 			Library:show(self.Toggled)
-			updateSettings("ToggleKey", self.Toggled)
 		end,
 	}
 
@@ -956,7 +955,7 @@ function Library:create(options)
 		Default = settings.DragSpeed,
 		Callback = function(value)
 			Library.DragSpeed = (20 - value)/100
-			updateSettings("DragSpeed", (20 - value)/100)
+			updateSettings("DragSpeed", value)
 		end,
 	}
 
@@ -3167,6 +3166,7 @@ function Library:keybind(options)
 		options.Keybind = keycode
 		keybindDisplay.Text = (options.Keybind and tostring(options.Keybind.Name):upper()) or "?"
 		keybindDisplay:tween{Size = UDim2.fromOffset(keybindDisplay.TextBounds.X + 20, 20), Length = 0.05}
+		updateSettings("ToggleKey", keycode)
 	end
 
 	return methods
