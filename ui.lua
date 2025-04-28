@@ -955,7 +955,7 @@ function Library:create(options)
 		Default = settings.DragSpeed,
 		Callback = function(value)
 			Library.DragSpeed = (20 - value)/100
-			updateSettings("DragSpeed", (20 - value))
+			updateSettings("DragSpeed", value)
 		end,
 	}
 
