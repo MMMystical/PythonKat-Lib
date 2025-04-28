@@ -423,7 +423,7 @@ function Library:create(options)
 
 	local settings = {
 		Theme = "Kat",
-		ToggleKey = Enum.KeyCode.Delete,
+		ToggleKey = "Delete",
 		LockDrag = true,
 		DragSpeed = 14
 	}
@@ -955,7 +955,7 @@ function Library:create(options)
 		Default = settings.DragSpeed,
 		Callback = function(value)
 			Library.DragSpeed = (20 - value)/100
-			updateSettings("DragSpeed", Library.DragSpeed)
+			updateSettings("DragSpeed", Library.DragSpeed * 100)
 		end,
 	}
 
@@ -3166,8 +3166,8 @@ function Library:keybind(options)
 		options.Keybind = keycode
 		keybindDisplay.Text = (options.Keybind and tostring(options.Keybind.Name):upper()) or "?"
 		keybindDisplay:tween{Size = UDim2.fromOffset(keybindDisplay.TextBounds.X + 20, 20), Length = 0.05}
+		print("shit")
 		updateSettings("ToggleKey", options.Keybind and tostring(options.Keybind.Name):upper())
-		print("ass")
 	end
 
 	return methods
