@@ -955,7 +955,7 @@ function Library:create(options)
 		Default = settings.DragSpeed,
 		Callback = function(value)
 			Library.DragSpeed = (20 - value)/100
-			updateSettings("DragSpeed", Library.DragSpeed * 100)
+			updateSettings("DragSpeed", (20 - value))
 		end,
 	}
 
@@ -3167,7 +3167,7 @@ function Library:keybind(options)
 		keybindDisplay.Text = (options.Keybind and tostring(options.Keybind.Name):upper()) or "?"
 		keybindDisplay:tween{Size = UDim2.fromOffset(keybindDisplay.TextBounds.X + 20, 20), Length = 0.05}
 		print("shit")
-		updateSettings("ToggleKey", options.Keybind and tostring(options.Keybind.Name):upper())
+		updateSettings("ToggleKey", tostring(options.Keybind.Name):upper())
 	end
 
 	return methods
