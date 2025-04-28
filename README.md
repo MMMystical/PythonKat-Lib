@@ -17,6 +17,7 @@
 ## v0.22 🦇 (LATEST, 04/29/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Latest Badge](https://img.shields.io/badge/The-LATEST-green?style=plastic&logo=steemit&logoColor=white&labelColor=black)
   - Setting saving ℹ️✅
   - Small fixes ✅
+    - fr
 ### v0.216 🦇 (04/27/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Major Badge](https://img.shields.io/badge/Update-MAJOR-purple?style=plastic&logo=moonrepo&logoColor=white&labelColor=black)
   - Updated home page 🔧
   - Added new clock and greeting ℹ️
