@@ -14,8 +14,10 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ## Changelog
-## v0.216 🦇 (LATEST, 04/27/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Latest Badge](https://img.shields.io/badge/The-LATEST-green?style=plastic&logo=steemit&logoColor=white&labelColor=black)
-![Image](https://github.com/user-attachments/assets/15c45045-8d24-4a29-ba7b-df488f288284)
+## v0.22 🦇 (LATEST, 04/29/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Latest Badge](https://img.shields.io/badge/The-LATEST-green?style=plastic&logo=steemit&logoColor=white&labelColor=black)
+  - Setting saving ℹ️✅
+  - Small fixes ✅
+### v0.216 🦇 (04/27/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Major Badge](https://img.shields.io/badge/Update-MAJOR-purple?style=plastic&logo=moonrepo&logoColor=white&labelColor=black)
   - Updated home page 🔧
   - Added new clock and greeting ℹ️
   - Updated status logic 🔨
