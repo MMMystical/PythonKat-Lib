@@ -931,7 +931,7 @@ function Library:create(options)
 	settingsTab:keybind{
 		Name = "Toggle Key",
 		Description = "Key to show/hide the UI.",
-		Keybind = settings.ToggleKey,
+		Keybind = Enum.KeyCode[settings.ToggleKey],
 		Callback = function()
 			self.Toggled = not self.Toggled
 			Library:show(self.Toggled)
@@ -3145,6 +3145,7 @@ function Library:keybind(options)
 					end
 					keybindDisplay.Text = (options.Keybind and tostring(options.Keybind.Name):upper()) or "?"
 					keybindDisplay:tween{Size = UDim2.fromOffset(keybindDisplay.TextBounds.X + 20, 20), Length = 0.05}
+					updateSettings("ToggleKey", (options.Keybind and tostring(options.Keybind.Name):upper()))
 					listening = false
 				end
 			else
@@ -3166,8 +3167,6 @@ function Library:keybind(options)
 		options.Keybind = keycode
 		keybindDisplay.Text = (options.Keybind and tostring(options.Keybind.Name):upper()) or "?"
 		keybindDisplay:tween{Size = UDim2.fromOffset(keybindDisplay.TextBounds.X + 20, 20), Length = 0.05}
-		print("shit")
-		updateSettings("ToggleKey", tostring(options.Keybind.Name):upper())
 	end
 
 	return methods
