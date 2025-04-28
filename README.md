@@ -44,20 +44,20 @@
   - Added a new theme (light) 💚
   - A bit better ui 🔨
   - A few more changes ✅
-### v0.14 🍀 (02/29/2024) ![ST Patrick's Badge](https://img.shields.io/badge/Event-ST%20PATRICK'S-darkgreen?style=flat&logo=googleearth&logoColor=white&labelColor=black) ![Minor Badge](https://img.shields.io/badge/Update-MINOR-lightgreen?style=flat&logo=moonrepo&logoColor=white&labelColor=black)
+### v0.14 🍀 (02/29/2024) ![ST Patrick's Badge](https://img.shields.io/badge/Event-ST%20PATRICK'S-darkgreen?style=flat&logo=googleearth&logoColor=white&labelColor=black) ![Minor Badge](https://img.shields.io/badge/Update-MINOR-green?style=flat&logo=moonrepo&logoColor=white&labelColor=black)
   - Changed default theme 💚
   - Small fix ✅
 ### v0.13 🎆 (12/31/2023) ![Lunar New Year Badge](https://img.shields.io/badge/Event-LUNAR%20NEW%20YEAR-red?style=flat&logo=googleearth&logoColor=white&labelColor=black) ![Major Badge](https://img.shields.io/badge/Update-MAJOR-purple?style=flat&logo=moonrepo&logoColor=white&labelColor=black)
   - New year theme 🌉
   - Few fixes ✅
-### v0.12 ❄ (12/06/2023) ![Christmas Badge](https://img.shields.io/badge/Event-CHRISTMAS-lightblue?style=flat&logo=googleearth&logoColor=white&labelColor=black) ![Minor Badge](https://img.shields.io/badge/Update-MINOR-lightgreen?style=flat&logo=moonrepo&logoColor=white&labelColor=black)
+### v0.12 ❄ (12/06/2023) ![Christmas Badge](https://img.shields.io/badge/Event-CHRISTMAS-lightblue?style=flat&logo=googleearth&logoColor=white&labelColor=black) ![Minor Badge](https://img.shields.io/badge/Update-MINOR-green?style=flat&logo=moonrepo&logoColor=white&labelColor=black)
   - Changes on credits tab 🔨
   - Small fixes ✅
 ### v0.11 ❄ (12/04/2023) ![Christmas Badge](https://img.shields.io/badge/Event-CHRISTMAS-lightblue?style=flat&logo=googleearth&logoColor=white&labelColor=black) ![Major Badge](https://img.shields.io/badge/Update-MAJOR-purple?style=flat&logo=moonrepo&logoColor=white&labelColor=black)
   - Added 2 new themes ❄😼
   - Some changes on credits 🔨
   - A few more changes ✅
-### v0.109 (12/03/2023) ![Minor Badge](https://img.shields.io/badge/Update-MINOR-lightgreen?style=flat&logo=moonrepo&logoColor=white&labelColor=black)
+### v0.109 (12/03/2023) ![Minor Badge](https://img.shields.io/badge/Update-MINOR-green?style=flat&logo=moonrepo&logoColor=white&labelColor=black)
   - Slight changes to the ui 📃
 ### v0.10 (12/03/2023) ![Release Badge](https://img.shields.io/badge/The-RELEASE-blue?style=flat&logo=moonrepo&logoColor=white&labelColor=black)
   - Release of the PythonKat Library 🔨
