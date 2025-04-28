@@ -15,6 +15,7 @@
 
 ## Changelog
 ## v0.22 🦇 (LATEST, 04/29/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Latest Badge](https://img.shields.io/badge/The-LATEST-green?style=plastic&logo=steemit&logoColor=white&labelColor=black)
+![Image](https://github.com/user-attachments/assets/471ea51d-f474-432e-a002-0fde4244f9f4)
   - Setting saving ℹ️✅
   - Small fixes ✅
     - fr
