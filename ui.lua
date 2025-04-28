@@ -7,7 +7,7 @@
 /_/    \__, /\__/_/ /_/\____/_/ /_/_/ |_\__,_/\__/  
       /____/                                        
 
-edited: 04/27
+edited: 04/29
 developers:
 v3rm: AbstractPoo	 	discord: Abstract#8007
 v3rm: 0xDEITY		 	discord: Deity#0228
@@ -422,7 +422,10 @@ end
 function Library:create(options)
 
 	local settings = {
-		Theme = "Kat"
+		Theme = "Kat",
+		ToggleKey = Enum.KeyCode.Delete,
+		LockDrag = true,
+		DragSpeed = 14
 	}
 
 	if readfile and writefile and isfile then
@@ -440,7 +443,9 @@ function Library:create(options)
 	options = self:set_defaults({
 		Name = "PythonKat 🦇",
 		Size = UDim2.fromOffset(600, 400),
-		Theme = self.Themes[settings.Theme],
+		Theme = self.Themes[settings.Theme],ToggleKey = Enum.KeyCode.Delete,
+		LockDrag = true,
+		DragSpeed = 14,
 		Link = "https://github.com/MMMystical/pythonkat-lib"
 	}, options)
 
@@ -856,7 +861,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.216 🩸"
+		Text = "Script | PythonKat v0.22 🩸"
 	})
 
 	function Library:set_scriptdisplay(txt)
@@ -926,19 +931,21 @@ function Library:create(options)
 	settingsTab:keybind{
 		Name = "Toggle Key",
 		Description = "Key to show/hide the UI.",
-		Keybind = Enum.KeyCode.Delete,
+		Keybind = settings.ToggleKey,
 		Callback = function()
 			self.Toggled = not self.Toggled
 			Library:show(self.Toggled)
+			updateSettings("ToggleKey", self.Toggled)
 		end,
 	}
 
 	settingsTab:toggle{
 		Name = "Lock Dragging",
 		Description = "Makes sure you can't drag the UI outside of the window.",
-		StartingState = true,
+		StartingState = settings.LockDrag,
 		Callback = function(state)
 			Library.LockDragging = state
+			updateSettings("LockDrag", state)
 		end,
 	}
 
@@ -946,9 +953,10 @@ function Library:create(options)
 		Name = "UI Drag Speed",
 		Description = "How smooth the dragging looks.",
 		Max = 20,
-		Default = 14,
+		Default = settings.DragSpeed,
 		Callback = function(value)
 			Library.DragSpeed = (20 - value)/100
+			updateSettings("DragSpeed", (20 - value)/100)
 		end,
 	}
 
@@ -957,8 +965,8 @@ function Library:create(options)
 		Description = "What's new to PythonKat?",
 		Callback = function()
 			settingsTab:prompt{
-				Title = "PythonKat v0.216 🩸",
-				Text = "-easter theme 🐇 + vampiric theme 🩸\n-bye summer theme ⛱️",
+				Title = "PythonKat v0.22 🩸",
+				Text = "-setting saving ℹ️✅\n-small fixes ✅",
 				Buttons = {
 					Nice = function()
 					end,
