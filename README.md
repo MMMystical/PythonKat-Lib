@@ -9,7 +9,7 @@
       /____/                                        
 ```
 
-# What is the PythonKat Library?
+## What is the PythonKat Library?
 - The PythonKat Library is a ui library for scripts used by PythonKat.
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
