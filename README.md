@@ -14,7 +14,7 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ## Changelog
-## v0.216 🦇 (LATEST, 04/27/2025) ![EVENT Badge](https://img.shields.io/badge/Event-EASTER-pink?style=flat&logo=googleearth&logoColor=white&labelColor=black) ![Latest Badge](https://img.shields.io/badge/The-LATEST-green?style=flat&logo=steemit&logoColor=white&labelColor=black)
+## v0.216 🦇 (LATEST, 04/27/2025) ![EVENT Badge](https://img.shields.io/badge/Event-EASTER-pink?style=flat&logo=googleearth&logoColor=white&labelColor=black) ![Static Badge](https://img.shields.io/badge/The-LATEST-green?style=flat&logo=steemit&logoColor=white&labelColor=black&link=https%3A%2F%2Fgithub.com%2FMMMystical%2FPythonKat-Lib%2Fedit%2Fmain%2FREADME.md)
 ![Image](https://github.com/user-attachments/assets/15c45045-8d24-4a29-ba7b-df488f288284)
   - Updated home page 🔧
   - Added new clock and greeting ℹ️
