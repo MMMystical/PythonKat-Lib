@@ -14,7 +14,7 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ## Changelog
-## v0.216 🦇 (LATEST, 04/27/2025)
+## v0.216 🦇 (LATEST, 04/27/2025) ![Status: Beta](https://img.shields.io/badge/Status-BETA-blueviolet)
 ![Image](https://github.com/user-attachments/assets/15c45045-8d24-4a29-ba7b-df488f288284)
   - Updated home page 🔧
   - Added new clock and greeting ℹ️
