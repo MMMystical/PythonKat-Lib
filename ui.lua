@@ -3145,7 +3145,7 @@ function Library:keybind(options)
 					end
 					keybindDisplay.Text = (options.Keybind and tostring(options.Keybind.Name):upper()) or "?"
 					keybindDisplay:tween{Size = UDim2.fromOffset(keybindDisplay.TextBounds.X + 20, 20), Length = 0.05}
-					updateSettings("ToggleKey", (options.Keybind and tostring(options.Keybind.Name):upper()))
+					updateSettings("ToggleKey", (options.Keybind and tostring(options.Keybind.Name)))
 					listening = false
 				end
 			else
