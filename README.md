@@ -14,7 +14,11 @@
 - It's based off [Mercury Lib](https://github.com/deeeity/mercury-lib/tree/master), a open source ui library for roblox scripts.
 
 ## Changelog
-## v0.22 🦇 (LATEST, 04/29/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Latest Badge](https://img.shields.io/badge/The-LATEST-green?style=plastic&logo=steemit&logoColor=white&labelColor=black)
+## v0.23 🦇 (LATEST, 04/29/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Latest Badge](https://img.shields.io/badge/The-LATEST-green?style=plastic&logo=steemit&logoColor=white&labelColor=black)
+![Image](https://github.com/user-attachments/assets/471ea51d-f474-432e-a002-0fde4244f9f4)
+  - Use of multiple instances now allowed ✅
+    - kewl
+### v0.22 🦇 (04/29/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Major Badge](https://img.shields.io/badge/Update-MAJOR-purple?style=plastic&logo=moonrepo&logoColor=white&labelColor=black)
 ![Image](https://github.com/user-attachments/assets/471ea51d-f474-432e-a002-0fde4244f9f4)
   - Settings saving ℹ️✅
   - Small fixes ✅
