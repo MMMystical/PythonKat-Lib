@@ -105,7 +105,7 @@ local Library = {
 }
 Library.__index = Library
 
-print("Running PythonKat 🦇 v0.23 🩸 build 1")
+print("Running PythonKat 🦇 v0.23 🩸 build 2")
 
 local selectedTab
 
@@ -864,6 +864,15 @@ function Library:create(options)
 		TextXAlignment = Enum.TextXAlignment.Left,
 		Text = "Script | PythonKat v0.23 🩸"
 	})
+	
+	function Library:closeUI()
+			core.ClipsDescendants = true
+			core:fade(true)
+			wait(0.1)
+			core:tween({Size = UDim2.new()}, function()
+				gui.AbsoluteObject:Destroy()
+			end)
+		end
 
 	function Library:set_scriptdisplay(txt)
 		scriptDisplay.Text = txt
