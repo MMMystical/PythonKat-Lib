@@ -975,7 +975,7 @@ function Library:create(options)
 		Callback = function()
 			settingsTab:prompt{
 				Title = "PythonKat v0.23 🩸",
-				Text = "-use of multiple instances now allowed ✅\n-🔧\nkewl",
+				Text = "-use of multiple instances now allowed ✅\nkewl",
 				Buttons = {
 					Nice = function()
 					end,
