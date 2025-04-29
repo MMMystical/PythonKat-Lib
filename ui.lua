@@ -105,7 +105,7 @@ local Library = {
 }
 Library.__index = Library
 
-print("Running PythonKat 🦇 v0.22 🩸 build 1")
+print("Running PythonKat 🦇 v0.23 🩸 build 1")
 
 local selectedTab
 
@@ -451,11 +451,10 @@ function Library:create(options)
 		Link = "https://github.com/MMMystical/pythonkat-lib"
 	}, options)
 
-	if getgenv and getgenv().PythonKatUI then
-		getgenv():PythonKatUI()
-		getgenv().PythonKatUI = nil
-	end
-
+	--if getgenv and getgenv().PythonKatUI then
+		--getgenv():PythonKatUI()
+		--getgenv().PythonKatUI = nil
+	--end
 
 
 	if options.Link:sub(-1, -1) == "/" then
@@ -601,9 +600,9 @@ function Library:create(options)
 		end)
 	end
 
-	if getgenv then
-		getgenv().PythonKatUI = closeUI
-	end
+	--if getgenv then
+		--getgenv().PythonKatUI = closeUI
+	--end
 
 	closeButton.MouseButton1Click:connect(function()
 		closeUI()
@@ -863,7 +862,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.22 🩸"
+		Text = "Script | PythonKat v0.23 🩸"
 	})
 
 	function Library:set_scriptdisplay(txt)
@@ -966,8 +965,8 @@ function Library:create(options)
 		Description = "What's new to PythonKat?",
 		Callback = function()
 			settingsTab:prompt{
-				Title = "PythonKat v0.22 🩸",
-				Text = "-settings saving ℹ️✅\n-small fixes ✅\nfr",
+				Title = "PythonKat v0.23 🩸",
+				Text = "-use of multiple instances now allowed ✅\n-🔧\nkewl",
 				Buttons = {
 					Nice = function()
 					end,
