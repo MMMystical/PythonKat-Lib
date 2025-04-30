@@ -15,7 +15,7 @@
 
 ## Changelog
 ## v0.231 🦇 (LATEST, 04/30/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Latest Badge](https://img.shields.io/badge/The-LATEST-green?style=plastic&logo=steemit&logoColor=white&labelColor=black)
-![image](https://github.com/user-attachments/assets/e2860f08-cf9d-4107-a2fd-4a12fd75d493)
+![image](https://github.com/user-attachments/assets/ff53609b-2c65-43ef-8742-922542f9d7d8)
   - Fixed theme display examples ✅
     - yez
 ### v0.23 🦇 (04/29/2025) ![Easter Badge](https://img.shields.io/badge/Event-EASTER-pink?style=plastic&logo=googleearth&logoColor=white&labelColor=black) ![Minor Badge](https://img.shields.io/badge/Update-MINOR-green?style=plastic&logo=moonrepo&logoColor=white&labelColor=black)
