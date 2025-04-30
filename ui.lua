@@ -7,7 +7,7 @@
 /_/    \__, /\__/_/ /_/\____/_/ /_/_/ |_\__,_/\__/  
       /____/                                        
 
-edited: 04/29
+edited: 04/30
 developers:
 v3rm: AbstractPoo	 	discord: Abstract#8007
 v3rm: 0xDEITY		 	discord: Deity#0228
@@ -105,7 +105,7 @@ local Library = {
 }
 Library.__index = Library
 
-print("Running PythonKat 🦇 v0.23 🩸 build 2")
+print("Running PythonKat 🦇 v0.231 🩸 build 2")
 
 local selectedTab
 
@@ -424,7 +424,7 @@ end
 function Library:create(options)
 
 	local settings = {
-		Theme = "Kat",
+		Theme = "Easter",
 		ToggleKey = "Delete",
 		LockDrag = true,
 		DragSpeed = 14
@@ -862,7 +862,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -1}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = "Script | PythonKat v0.23 🩸"
+		Text = "Script | PythonKat v0.231 🩸"
 	})
 	
 	function Library:closeUI()
@@ -974,8 +974,8 @@ function Library:create(options)
 		Description = "What's new to PythonKat?",
 		Callback = function()
 			settingsTab:prompt{
-				Title = "PythonKat v0.23 🩸",
-				Text = "-use of multiple instances now allowed ✅\nkewl",
+				Title = "PythonKat v0.231 🩸",
+				Text = "-fixed theme display examples ✅\nyez",
 				Buttons = {
 					Nice = function()
 					end,
@@ -3012,7 +3012,7 @@ function Library:_theme_selector()
 			local themeColorsContainer = theme:object("Frame", {
 				Size = UDim2.new(1, 0, 1, -20),
 				BackgroundTransparency = 1
-			}):round(5):stroke("Icon", 1)
+			}):round(5):stroke("WeakText", 1)
 
 			local themeNameLabel = theme:object("TextLabel", {
 				BackgroundTransparency = 1,
@@ -3052,12 +3052,12 @@ function Library:_theme_selector()
 
 			local colorStrong = colorSecondary:object("Frame", {
 				Size = UDim2.new(1, -30, 0, 9),
-				BackgroundColor3 = themeColors.Icon
+				BackgroundColor3 = themeColors.StrongText
 			}):round(100)
 
 			local colorTertiary = colorSecondary:object("Frame", {
 				Size = UDim2.new(1, -40, 0, 9),
-				BackgroundColor3 = themeColors.Icon
+				BackgroundColor3 = themeColors.WeakText
 			}):round(100)
 
 			theme.MouseButton1Click:connect(function()
